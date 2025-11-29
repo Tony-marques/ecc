@@ -1,14 +1,15 @@
-.socialBar {
-  background: var(--primary-color);
-  padding: 0.7rem;
+.navbar {
+  padding: 1rem 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 6rem;
 
-  ul {
+  ul{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+
   }
 }

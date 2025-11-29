@@ -1,0 +1,20 @@
+.navItem {
+  list-style: none;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+
+  &.biens {
+    background: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    a {
+      color: white;
+    }
+  }
+}

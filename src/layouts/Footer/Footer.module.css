@@ -1,0 +1,79 @@
+.footer {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 4rem;
+  /* align-items: center; */
+
+  img {
+  }
+
+  h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--secondary-color);
+        transition: all 0.3s ease
+      }
+    }
+
+    .address {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .email {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--secondary-color);
+        transition: all 0.3s ease
+      }
+    }
+  }
+
+  svg {
+    color: var(--secondary-color);
+  }
+}

@@ -1,3 +1,5 @@
+import styles from "./SocialItem.module.css";
+
 interface SocialItemProps {
   label: string;
   Icon: React.ReactElement;
@@ -6,7 +8,7 @@ interface SocialItemProps {
 
 export default function SocialItem({ label, Icon, href }: SocialItemProps) {
   return (
-    <li>
+    <li className={styles.socialItem}>
       <a href={href} aria-label={label}>
         {Icon}
       </a>
