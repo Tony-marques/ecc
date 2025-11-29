@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import SocialItem from "./SocialItem";
+import styles from "./SocialBar.module.css";
 
 interface SocialItemConfig {
   label: string;
@@ -33,12 +34,12 @@ const SOCIALBAR_CONFIGS: SocialItemConfig[] = [
 
 export default function SocialBar() {
   return (
-    <nav>
+    <div className={styles.socialBar}>
       <ul>
         {SOCIALBAR_CONFIGS.map((item) => (
           <SocialItem key={item.label} {...item} />
         ))}
       </ul>
-    </nav>
+    </div>
   );
 }

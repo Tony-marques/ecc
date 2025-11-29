@@ -1,0 +1,26 @@
+.socialBar {
+  background: var(--primary-color);
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 1rem; */
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+}
