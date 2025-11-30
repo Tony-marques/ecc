@@ -13,20 +13,20 @@ const NAVBAR_CONFIGS: NavItemConfig[] = [
     path: "/",
   },
   {
-    label: "A propos",
-    path: "/a-propos",
+    label: "Qui sommes-nous ?",
+    path: "#qui-sommes-nous",
   },
   {
-    label: "Contact",
-    path: "/contact",
+    label: "Contactez-nous",
+    path: "#contactez-nous",
   },
   {
-    label: "Services",
-    path: "/services",
+    label: "Nos services",
+    path: "#nos-services",
   },
   {
     label: "Consultez nos biens",
-    path: "#biens",
+    path: "#consultez-nos-biens",
     className: "biens",
   },
 ];

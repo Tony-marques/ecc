@@ -5,10 +5,15 @@
   font-family: "Nunito", sans-serif;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 :root {
