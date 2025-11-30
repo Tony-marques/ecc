@@ -11,24 +11,6 @@ export default function NavItem({ label, path, className }: NavItemProps) {
   const location = useLocation();
   const isAnchor = path.startsWith("#");
 
-  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (isAnchor) {
-      e.preventDefault();
-      const targetId = path.substring(1);
-      const element = document.getElementById(targetId);
-      if (element) {
-        const yOffset = -100;
-        const y =
-          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({
-          top: y,
-          behavior: "smooth",
-        });
-      }
-    }
-  };
-
   if (isAnchor) {
     return (
       <li
@@ -40,7 +22,6 @@ export default function NavItem({ label, path, className }: NavItemProps) {
       >
         <a
           href={path}
-          // onClick={handleAnchorClick}
           className={location.hash === path ? "active" : ""}
         >
           {label}
