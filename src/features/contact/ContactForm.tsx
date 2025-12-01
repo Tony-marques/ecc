@@ -1,5 +1,6 @@
+import emailjs from "emailjs-com";
 import type { FormEvent } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ContactForm.module.css";
 
 interface FormData {
@@ -24,6 +25,13 @@ export default function ContactForm() {
     null
   );
 
+  useEffect(() => {
+    if (submitStatus) {
+      const t = setTimeout(() => setSubmitStatus(null), 5000);
+      return () => clearTimeout(t);
+    }
+  }, [submitStatus]);
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -42,19 +50,35 @@ export default function ContactForm() {
     setSubmitStatus(null);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
+      e.preventDefault();
+
+      const data = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      emailjs
+        .send("service_k04k20b", "template_4t2qtoe", data, "q5uC-6vUJ31sLcH-G")
+        .then(() => {
+          setSubmitStatus("success");
+
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+        })
+        .catch(() => alert("Erreur lors de l’envoi"))
+        .finally(() => {
+          setIsSubmitting(false);
+        });
     } catch {
       setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -110,9 +134,9 @@ export default function ContactForm() {
           required
         >
           <option value="">Sélectionnez un sujet</option>
-          <option value="information">Demande d'information</option>
-          <option value="visite">Demande de visite</option>
-          <option value="estimation">Demande d'estimation</option>
+          <option value="demande d'information">Demande d'information</option>
+          <option value="demande de visite">Demande de visite</option>
+          <option value="demande d'estimation">Demande d'estimation</option>
           <option value="autre">Autre</option>
         </select>
       </div>
