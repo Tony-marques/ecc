@@ -1,11 +1,13 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
 
-body {
+html {
   scroll-behavior: smooth;
 }
 
@@ -13,10 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  scroll-behavior: smooth;
 }
 
 :root {
-  --primary-color: #3E4D9A;
-  --secondary-color: #EAB14F;
+  --primary-color: #3e4d9a;
+  --secondary-color: #eab14f;
 }

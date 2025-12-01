@@ -60,7 +60,8 @@ export default function About() {
                 <p>
                   Nous mettons notre expertise et notre passion au service de
                   votre projet, avec une attention particulière portée à chaque
-                  détail pour créer l'<strong>Effet Coup de Cœur</strong>.
+                  détail pour créer l'
+                  <strong>Effet Coup de Cœur</strong>.
                 </p>
               </div>
             </div>

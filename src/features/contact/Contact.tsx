@@ -1,7 +1,7 @@
 import { FaMapPin, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import ContactForm from "./ContactForm";
 import styles from "./Contact.module.css";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (

@@ -14,19 +14,19 @@ const NAVBAR_CONFIGS: NavItemConfig[] = [
   },
   {
     label: "Qui sommes-nous ?",
-    path: "#qui-sommes-nous",
+    path: "qui-sommes-nous",
   },
   {
     label: "Contactez-nous",
-    path: "#contactez-nous",
+    path: "contactez-nous",
   },
   {
     label: "Nos services",
-    path: "#nos-services",
+    path: "nos-services",
   },
   {
     label: "Consultez nos biens",
-    path: "#consultez-nos-biens",
+    path: "consultez-nos-biens",
     className: "biens",
   },
 ];
