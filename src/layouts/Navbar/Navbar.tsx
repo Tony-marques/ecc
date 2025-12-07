@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 import styles from "./Navbar.module.css";
 
@@ -32,8 +33,31 @@ const NAVBAR_CONFIGS: NavItemConfig[] = [
 ];
 
 export default function Navbar() {
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 500) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}>
       <img src="/logo.png" alt="logo" />
       <ul>
         {NAVBAR_CONFIGS.map((item) => (

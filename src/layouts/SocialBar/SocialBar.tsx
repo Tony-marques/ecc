@@ -13,22 +13,22 @@ const SOCIALBAR_CONFIGS: SocialItemConfig[] = [
   {
     label: "facebook",
     Icon: <FaFacebook />,
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/profile.php?id=61584790737384#",
   },
-  {
-    label: "linkedin",
-    Icon: <FaLinkedin />,
-    href: "https://linkedin.com",
-  },
+  // {
+  //   label: "linkedin",
+  //   Icon: <FaLinkedin />,
+  //   href: "https://linkedin.com",
+  // },
   {
     label: "instagram",
     Icon: <FaInstagram />,
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/ecdc_conciergerie/?igsh=MXVlcTEyZG5zcWh1NA%3D%3D#",
   },
   {
     label: "contact",
     Icon: <MdEmail />,
-    href: "mailto:contact@example.com",
+    href: "contactez-nous",
   },
 ];
 
