@@ -17,7 +17,7 @@ export default function About() {
           <h1>Qui sommes-nous ?</h1>
           <p className={styles.intro}>
             Bienvenue chez Effet Coup de Cœur, votre conciergerie spécialisée
-            dans la location courte durée.
+            dans la location courte durée.²²
           </p>
         </div>
 
