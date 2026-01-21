@@ -24,7 +24,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  37000 Tours
+                  37390 Notre-Dame-d'Oé
                 </a>
               </div>
             </div>
@@ -33,7 +33,7 @@ export default function Contact() {
               <FaPhoneAlt className={styles.icon} />
               <div>
                 <h3>Téléphone</h3>
-                <a href="tel:0699999999">06 99 99 99 99</a>
+                <a href="tel:0699999999">06 75 88 41 03</a>
               </div>
             </div>
 
@@ -41,8 +41,8 @@ export default function Contact() {
               <MdEmail className={styles.icon} />
               <div>
                 <h3>Email</h3>
-                <a href="mailto:contact@effetcoupdecoeur.com">
-                  contact@effetcoupdecoeur.com
+                <a href="mailto:ecdconciergerie@gmail.com">
+                  ecdconciergerie@gmail.com
                 </a>
               </div>
             </div>

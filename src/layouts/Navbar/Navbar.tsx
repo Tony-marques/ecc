@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 import styles from "./Navbar.module.css";
+import logo from "../../assets/images/logo.png";
 
 interface NavItemConfig {
   label: string;
@@ -57,8 +58,10 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <nav className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}>
-      <img src="/logo.png" alt="logo" />
+    <nav
+      className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}
+    >
+      <img src={logo} alt="logo" id="logo" />
       <ul>
         {NAVBAR_CONFIGS.map((item) => (
           <NavItem key={item.path} {...item} />

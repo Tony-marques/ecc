@@ -58,7 +58,7 @@
 
 .submitButton {
   background: var(--secondary-color);
-  color: white;
+  color: var(--primary-color);
   padding: 1rem 2rem;
   border: none;
   border-radius: 0.5rem;
@@ -72,7 +72,7 @@
 }
 
 .submitButton:hover:not(:disabled) {
-  background: #d4a044;
+  opacity: 0.8;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(234, 177, 79, 0.3);
 }

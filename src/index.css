@@ -17,7 +17,16 @@ html {
   min-height: 100vh;
 }
 
+/* :root {
+  --primary-color: #4A3428   ;
+  --secondary-color: #F5E6D3 ;
+} */
 :root {
+  --primary-color: #9b7d62;
+  --secondary-color: #e8d5ba;
+}
+
+/* :root {
   --primary-color: #3e4d9a;
   --secondary-color: #eab14f;
-}
+} */
