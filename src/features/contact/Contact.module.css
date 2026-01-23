@@ -45,12 +45,13 @@
 
 .infoCard {
   background: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15);
 }
 
 .infoItem {
@@ -86,9 +87,10 @@
 
 .formContainer {
   background: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15);
 }
 
 @media (max-width: 768px) {

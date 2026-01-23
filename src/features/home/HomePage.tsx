@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 import About from "../about/About";
 import Contact from "../contact/Contact";
+import Properties from "../properties/Properties";
 import ImageCarousel from "./ImageCarousel";
 import styles from "./HomePage.module.css";
 
@@ -25,6 +26,7 @@ export default function HomePage() {
     <main className={styles.homePage}>
       <ImageCarousel />
       <About />
+      <Properties />
       <Contact />
     </main>
   );

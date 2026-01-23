@@ -8,7 +8,8 @@
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
-  background: white;
+  /* background: #faf8f5; */
+  background: var(--bg-primary);
 
   img {
     width: 300px;

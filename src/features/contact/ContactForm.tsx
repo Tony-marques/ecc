@@ -22,7 +22,7 @@ export default function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
-    null
+    null,
   );
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -134,10 +134,16 @@ export default function ContactForm() {
           required
         >
           <option value="">Sélectionnez un sujet</option>
-          <option value="demande d'information">Demande d'information</option>
-          <option value="demande de visite">Demande de visite</option>
-          <option value="demande d'estimation">Demande d'estimation</option>
-          <option value="autre">Autre</option>
+          <option value="demandes d'informations">
+            Demandes d'informations
+          </option>
+          <option value="confier bien">Confier un bien en gestion </option>
+          <option value="devenir prestataire">
+            Devenir prestataire (ménage, linge, maintenance)
+          </option>
+          <option value="partenariat">
+            Partenariat / apporteur d'affaires
+          </option>
         </select>
       </div>
 

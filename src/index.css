@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #9F654D;
+  --secondary-color: #e8d5ba;
+  --bg-primary: #F3EAE5;
+  --bg-secondary: #FFFFFF;
+  --font-primary: #936555;
+  /* --bg-primary: #E6D7C4; */
+}
+
 *,
 ::before,
 ::after {
@@ -15,16 +24,18 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--bg-primary);
+  /* background-color: #faf8f5; */
 }
 
 /* :root {
   --primary-color: #4A3428   ;
   --secondary-color: #F5E6D3 ;
 } */
-:root {
+/* :root {
   --primary-color: #9b7d62;
   --secondary-color: #e8d5ba;
-}
+} */
 
 /* :root {
   --primary-color: #3e4d9a;
