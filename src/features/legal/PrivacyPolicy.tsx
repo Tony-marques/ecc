@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import styles from "./PrivacyPolicy.module.css";
+import { usePageMeta } from "../../hooks/usePageMeta";
 
 export default function PrivacyPolicy() {
   const { t } = useTranslation();
+  usePageMeta("privacyPolicy");
 
   return (
     <main className={styles.privacyPolicy}>

@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import styles from "./LegalNotice.module.css";
+import { usePageMeta } from "../../hooks/usePageMeta";
 
 export default function LegalNotice() {
   const { t } = useTranslation();
+  usePageMeta("legalNotice");
 
   return (
     <main className={styles.legalNotice}>

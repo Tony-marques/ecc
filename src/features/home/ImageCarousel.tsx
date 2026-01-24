@@ -63,6 +63,7 @@ export default function ImageCarousel() {
           src={images[currentIndex]}
           alt={`Maison ${currentIndex + 1}`}
           className={`${styles.image} ${styles.fadeIn}`}
+          loading="lazy"
         />
 
         <button

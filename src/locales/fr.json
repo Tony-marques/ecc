@@ -1,4 +1,34 @@
 {
+  "seo": {
+    "home": {
+      "title": "Conciergerie Effet Coup de Cœur",
+      "description": "Spécialiste de la location courte durée à Tours. Valorisation immobilière, gestion de propriétés, accueil voyageurs. Conciergerie haut de gamme."
+    },
+    "about": {
+      "title": "Notre équipe | Effet Coup de Cœur",
+      "description": "Découvrez l'histoire de Rémi et Laura, fondateurs d'Effet Coup de Cœur. Deux passionnés au service de votre conciergerie."
+    },
+    "contact": {
+      "title": "Nous contacter | Effet Coup de Cœur",
+      "description": "Questions ou demande de devis ? Contactez-nous directement. Notre équipe répond à tous vos besoins de conciergerie."
+    },
+    "services": {
+      "title": "Nos services de conciergerie | Tours",
+      "description": "Valorisation de bien, accueil voyageurs, suivi quotidien, services pour résidence secondaire. Découvrez nos solutions complètes."
+    },
+    "properties": {
+      "title": "Nos biens | Location courte durée Tours",
+      "description": "Consultez notre sélection de propriétés de qualité disponibles à la location courte durée à Tours."
+    },
+    "legalNotice": {
+      "title": "Mentions légales | Effet Coup de Cœur",
+      "description": "Mentions légales, conditions d'utilisation et informations légales du site ecdconciergerie.fr"
+    },
+    "privacyPolicy": {
+      "title": "Politique de confidentialité RGPD | Effet Coup de Cœur",
+      "description": "Politique de confidentialité et protection des données personnelles conforme au RGPD."
+    }
+  },
   "nav": {
     "home": "Accueil",
     "about": "Notre équipe",

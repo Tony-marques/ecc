@@ -104,6 +104,7 @@ export default function Properties() {
                   alt={
                     property.titleKey ? t(property.titleKey) : property.title
                   }
+                  loading="lazy"
                 />
                 <div className={styles.overlay}>
                   <span>{t("properties.viewOnAirbnb")}</span>

@@ -8,9 +8,11 @@ import ImageCarousel from "./ImageCarousel";
 import styles from "./HomePage.module.css";
 import Divider from "../../components/divider/Divider";
 import Services from "../services/Services";
+import { usePageMeta } from "../../hooks/usePageMeta";
 
 export default function HomePage() {
   const location = useLocation();
+  usePageMeta("home");
 
   useEffect(() => {
     if (location.hash) {

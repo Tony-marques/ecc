@@ -1,4 +1,34 @@
 {
+  "seo": {
+    "home": {
+      "title": "Effet Coup de Cœur Concierge",
+      "description": "Short-term rental specialist in Tours. Property valorization, property management, traveler welcome. Premium concierge service."
+    },
+    "about": {
+      "title": "Our Team | Effet Coup de Cœur",
+      "description": "Meet Rémi and Laura, founders of Effet Coup de Cœur. Two passionate people at your service for concierge solutions."
+    },
+    "contact": {
+      "title": "Contact Us | Effet Coup de Cœur",
+      "description": "Questions or quote request? Contact us directly. Our team handles all your concierge needs."
+    },
+    "services": {
+      "title": "Our Concierge Services | Tours",
+      "description": "Property valorization, traveler welcome, daily management, secondary residence services. Discover our complete solutions."
+    },
+    "properties": {
+      "title": "Our Properties | Short-term Rental Tours",
+      "description": "Browse our selection of quality properties available for short-term rental in Tours."
+    },
+    "legalNotice": {
+      "title": "Legal Notice | Effet Coup de Cœur",
+      "description": "Legal notice, terms of use and legal information of ecdconciergerie.fr"
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy GDPR | Effet Coup de Cœur",
+      "description": "Privacy policy and personal data protection compliant with GDPR."
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "Our team",
