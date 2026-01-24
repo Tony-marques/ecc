@@ -1,11 +1,3 @@
-import {
-  FaChartLine,
-  FaHandshake,
-  FaHeart,
-  FaPlane,
-  FaShieldAlt,
-} from "react-icons/fa";
-import { MdHomeWork } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 // import equipeImage from "../../assets/images/equipe.jpg";
 import equipeImage from "../../assets/images/equipe-3.png";

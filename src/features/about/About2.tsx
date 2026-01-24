@@ -1,19 +1,7 @@
-import {
-  FaChartLine,
-  FaHandshake,
-  FaHeart,
-  FaPlane,
-  FaShieldAlt,
-} from "react-icons/fa";
-import { MdHomeWork } from "react-icons/md";
-import { useTranslation } from "react-i18next";
 // import equipeImage from "../../assets/images/equipe.jpg";
 import equipeImage from "../../assets/images/equipe-2.png";
-import styles from "./About.module.css";
 
 export default function About() {
-  const { t } = useTranslation();
-
   // <div className={styles.about} id="qui-sommes-nous">
   //   <div className={styles.container}>
   //     <div className={styles.header}>
