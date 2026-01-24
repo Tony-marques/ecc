@@ -12,7 +12,7 @@
   }
 
   h3 {
-    color: var(--secondary-color);
+    color: var(--bg-primary);
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -76,6 +76,7 @@
   }
 
   svg {
-    color: var(--secondary-color);
+    color: var(--bg-primary);
+    /* color: var(--secondary-color); */
   }
 }

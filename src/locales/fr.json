@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Accueil",
-    "about": "Qui sommes-nous ?",
+    "about": "Notre équipe",
     "contact": "Contactez-nous",
     "services": "Nos services",
     "properties": "Consultez nos biens"
@@ -11,7 +11,7 @@
     "description": "Votre conciergerie spécialisée dans la location courte durée"
   },
   "about": {
-    "title": "Qui sommes-nous ?",
+    "title": "Notre équipe",
     "intro": "Bienvenue chez Effet Coup de Cœur, votre conciergerie spécialisée dans la location courte durée.",
     "teamIntro": "Derrière ce projet, il y a nous : une équipe de deux passionnés, chacun avec son univers.",
     "teamHeading": "Notre équipe",

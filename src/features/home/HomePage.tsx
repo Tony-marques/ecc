@@ -6,6 +6,7 @@ import Contact from "../contact/Contact";
 import Properties from "../properties/Properties";
 import ImageCarousel from "./ImageCarousel";
 import styles from "./HomePage.module.css";
+import Divider from "../../components/divider/Divider";
 
 export default function HomePage() {
   const location = useLocation();
@@ -25,8 +26,11 @@ export default function HomePage() {
   return (
     <main className={styles.homePage}>
       <ImageCarousel />
+      <Divider />
       <About />
+      <Divider />
       <Properties />
+      <Divider />
       <Contact />
     </main>
   );

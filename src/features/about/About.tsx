@@ -15,7 +15,7 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <section className={styles["team-section"]}>
+    <section className={styles["team-section"]} id="notre-equipe">
       <div className={styles["team-container"]}>
         <header className={styles["team-header"]}>
           <h2>Notre équipe</h2>

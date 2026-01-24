@@ -23,7 +23,7 @@ export default function Navbar() {
     },
     {
       label: t("nav.about"),
-      path: "qui-sommes-nous",
+      path: "notre-equipe",
     },
     {
       label: t("nav.contact"),
