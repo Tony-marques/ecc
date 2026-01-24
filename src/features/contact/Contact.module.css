@@ -2,24 +2,58 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 100px 20px;
+  background-color: #f6efe9;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 60px;
 }
 
 .header h1 {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+  color: #705141;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
-.header p {
-  color: #666;
-  font-size: 1.2rem;
+.intro {
+  color: #705141;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 35px;
+}
+
+.headerDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.headerDivider span {
+  width: 120px;
+  height: 1px;
+  background-color: #705141;
+}
+
+.headerDivider span:first-child {
+  background: linear-gradient(90deg, transparent 0%, #705141 100%);
+}
+
+.headerDivider span:last-child {
+  background: linear-gradient(90deg, #705141 0%, transparent 100%);
+}
+
+.dividerDot {
+  width: 6px !important;
+  height: 6px !important;
+  background-color: #705141 !important;
+  margin: 0 8px;
+  transform: rotate(45deg);
 }
 
 .content {
@@ -37,21 +71,21 @@
 
 .contactInfo h2,
 .formContainer h2 {
-  color: var(--primary-color);
+  font-family: "Playfair Display", serif;
+  color: #705141;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
 .infoCard {
   background: white;
-  border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .infoItem {
@@ -61,36 +95,37 @@
 }
 
 .infoItem .icon {
-  color: var(--secondary-color);
+  color: #705141;
   font-size: 1.5rem;
   margin-top: 0.25rem;
   flex-shrink: 0;
 }
 
 .infoItem h3 {
-  color: var(--primary-color);
+  color: #705141;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .infoItem a {
-  color: #666;
+  color: #705141;
   text-decoration: none;
   line-height: 1.6;
   transition: color 0.3s ease;
 }
 
 .infoItem a:hover {
-  color: var(--primary-color);
+  color: #705141;
 }
 
 .formContainer {
   background: white;
-  border: 1px solid var(--primary-color);
+  /* border: 1px solid #705141; */
   border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15);
+  /* box-shadow: 0 2px 12px rgba(112, 81, 65, 0.15); */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
   padding: 3rem 0;
   min-height: calc(100vh - 300px);
   flex: 1;
-  background-color: #f8f9fa;
+  background-color: #f6efe9;
 }
 
 .container {
@@ -12,20 +12,24 @@
 }
 
 .legalNotice h1 {
+  font-family: "Playfair Display", serif;
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: #705141;
   margin-bottom: 2rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .legalNotice h2 {
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: #705141;
   margin: 2rem 0 1rem 0;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid #705141;
+  font-weight: 400;
 }
 
 .legalNotice section {
@@ -34,7 +38,7 @@
 }
 
 .legalNotice p {
-  color: #666;
+  color: #705141;
   margin-bottom: 1rem;
   text-align: justify;
 }

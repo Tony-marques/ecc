@@ -66,7 +66,12 @@ export default function Properties() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h1>{t("properties.title")}</h1>
-          <p>{t("properties.description")}</p>
+          <p className={styles.intro}>{t("properties.description")}</p>
+          <div className={styles.headerDivider}>
+            <span></span>
+            <span className={styles.dividerDot}></span>
+            <span></span>
+          </div>
         </div>
 
         <div className={styles.grid}>

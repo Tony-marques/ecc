@@ -11,7 +11,12 @@ export default function Contact() {
     <div className={styles.container} id="contactez-nous">
       <div className={styles.header}>
         <h1>{t("contact.title")}</h1>
-        <p>{t("contact.subtitle")}</p>
+        <p className={styles.intro}>{t("contact.subtitle")}</p>
+        <div className={styles.headerDivider}>
+          <span></span>
+          <span className={styles.dividerDot}></span>
+          <span></span>
+        </div>
       </div>
 
       <div className={styles.content}>
