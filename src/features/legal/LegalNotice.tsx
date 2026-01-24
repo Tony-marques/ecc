@@ -1,134 +1,83 @@
+import { useTranslation } from "react-i18next";
 import styles from "./LegalNotice.module.css";
 
 export default function LegalNotice() {
+  const { t } = useTranslation();
+
   return (
     <main className={styles.legalNotice}>
       <div className={styles.container}>
-        <h1>Mentions légales</h1>
+        <h1>{t("legalNotice.title")}</h1>
 
         <section>
-          <p>
-            Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004
-            pour la confiance dans l'économie numérique, il est précisé aux
-            utilisateurs du site www.ecdconciergerie.fr l'identité des
-            différents intervenants dans le cadre de sa réalisation et de son
-            suivi.
-          </p>
+          <p>{t("legalNotice.intro")}</p>
         </section>
 
         <section>
-          <h2>Éditeur du site</h2>
-          <p>
-            Le site accessible à l'adresse www.ecdconciergerie.fr est conçu et
-            édité par :
-          </p>
+          <h2>{t("legalNotice.editorTitle")}</h2>
+          <p>{t("legalNotice.editorIntro")}</p>
           <div className={styles.infoParagraph}>
-            <strong>SAS Effet Coup de Cœur – Conciergerie</strong>
+            <strong>{t("legalNotice.companyName")}</strong>
             <br />
-            Société par actions simplifiée au capital de 1 000 €
+            {t("legalNotice.companyStatus")}
             <br />
-            Immatriculée au Registre du Commerce et des Sociétés de Tours sous
-            le numéro 999 599 541 RCS Tours
+            {t("legalNotice.companyRegistry")}
             <br />
-            Siège social : 28 rue du Vieux Bourg, 37390 Notre-Dame-d'Oé
+            {t("legalNotice.companyAddress")}
             <br />
-            📧 Email :{" "}
+            📧 {t("legalNotice.emailLabel")}{" "}
             <a href="mailto:ecdconciergerie@gmail.com">
               ecdconciergerie@gmail.com
             </a>
             <br />
-            📞 Téléphone : 06 82 11 76 25 / 06 75 88 41 03
+            📞 {t("legalNotice.phoneLabel")} 06 82 11 76 25 / 06 75 88 41 03
           </div>
         </section>
 
         <section>
-          <h2>Responsable de la publication</h2>
+          <h2>{t("legalNotice.publisherTitle")}</h2>
           <div className={styles.infoParagraph}>
-            <strong>Madame Laura Marques</strong>
+            <strong>{t("legalNotice.publisherName")}</strong>
             <br />
-            Présidente de la SAS Effet Coup de Cœur – Conciergerie
+            {t("legalNotice.publisherRole")}
           </div>
         </section>
 
         <section>
-          <h2>Hébergement</h2>
-          <p>Le site est hébergé par :</p>
+          <h2>{t("legalNotice.hostingTitle")}</h2>
+          <p>{t("legalNotice.hostingIntro")}</p>
           <div className={styles.infoParagraph}>
-            <strong>Hostinger</strong>
+            <strong>{t("legalNotice.hostName")}</strong>
             <br />
-            Société de services en ligne
+            {t("legalNotice.hostDetails")}
             <br />
-            Site : www.hostinger.fr
+            {t("legalNotice.hostSite")}
           </div>
         </section>
 
         <section>
-          <h2>Conditions d'utilisation</h2>
-          <p>
-            L'utilisation du site www.ecdconciergerie.fr implique l'acceptation
-            pleine et entière des conditions générales d'utilisation décrites
-            ci-après.
-          </p>
-          <p>
-            Ces conditions d'utilisation sont susceptibles d'être modifiées ou
-            complétées à tout moment, les utilisateurs du site sont donc invités
-            à les consulter de manière régulière.
-          </p>
-          <p>
-            La SAS Effet Coup de Cœur – Conciergerie ne saurait être tenue
-            responsable d'une mauvaise utilisation du site.
-          </p>
+          <h2>{t("legalNotice.termsTitle")}</h2>
+          <p>{t("legalNotice.termsIntro1")}</p>
+          <p>{t("legalNotice.termsIntro2")}</p>
+          <p>{t("legalNotice.termsIntro3")}</p>
         </section>
 
         <section>
-          <h2>Propriété intellectuelle</h2>
-          <p>
-            L'ensemble du contenu du site www.ecdconciergerie.fr (textes,
-            images, graphismes, logo, structure) est la propriété exclusive de
-            la SAS Effet Coup de Cœur – Conciergerie, sauf mentions contraires.
-          </p>
-          <p>
-            Les photographies utilisées proviennent de la banque d'images
-            gratuites Unsplash.
-          </p>
-          <p>
-            La conception et le développement du site ont été réalisés par Tony
-            Marques. Le site est réalisé avec React et Typescript.
-          </p>
-          <p>
-            L'identité visuelle et l'image de marque ont été créées par Jérémy
-            Lemercier.
-          </p>
-          <p>
-            Toute reproduction, représentation, modification, publication ou
-            adaptation de tout ou partie des éléments du site, quel que soit le
-            moyen ou le procédé utilisé, est interdite sans l'autorisation
-            écrite préalable de la Présidente de la SAS Effet Coup de Cœur –
-            Conciergerie.
-          </p>
-          <p>
-            Toute création de lien hypertexte vers le site
-            www.ecdconciergerie.fr est soumise à l'autorisation préalable de la
-            SAS Effet Coup de Cœur – Conciergerie.
-          </p>
+          <h2>{t("legalNotice.ipTitle")}</h2>
+          <p>{t("legalNotice.ip1")}</p>
+          <p>{t("legalNotice.ip2")}</p>
+          <p>{t("legalNotice.ip3")}</p>
+          <p>{t("legalNotice.ip4")}</p>
+          <p>{t("legalNotice.ip5")}</p>
+          <p>{t("legalNotice.ip6")}</p>
         </section>
 
         <section>
-          <h2>Données personnelles</h2>
+          <h2>{t("legalNotice.dataTitle")}</h2>
+          <p>{t("legalNotice.data1")}</p>
+          <p>{t("legalNotice.data2")}</p>
           <p>
-            Les informations recueillies via le site www.ecdconciergerie.fr
-            (formulaire de contact, adresse email) sont enregistrées par la SAS
-            Effet Coup de Cœur – Conciergerie afin de répondre aux demandes des
-            utilisateurs.
-          </p>
-          <p>
-            Conformément au Règlement Général sur la Protection des Données
-            (RGPD), les utilisateurs disposent d'un droit d'accès, de
-            rectification, d'opposition et de suppression des données les
-            concernant.
-          </p>
-          <p>
-            Ces droits peuvent être exercés en adressant une demande à :{" "}
+            {t("legalNotice.data3")}{" "}
             <a href="mailto:ecdconciergerie@gmail.com">
               ecdconciergerie@gmail.com
             </a>
