@@ -14,4 +14,9 @@
     font-weight: 600;
     transition: all 0.3s ease;
   }
+
+  a:hover {
+    color: #f6efe9;
+    transform: translateY(-3px) scale(1.1);
+  }
 }
