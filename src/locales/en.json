@@ -67,7 +67,31 @@
   "properties": {
     "title": "View Our Properties",
     "description": "Discover our selection of quality properties",
-    "viewOnAirbnb": "View on Airbnb"
+    "viewOnAirbnb": "View on Airbnb",
+    "capacityLabel": "guest",
+    "bedroomsLabel": "bedroom",
+    "items": {
+      "1": {
+        "title": "Property title",
+        "location": "Tours, France",
+        "description": "Property description"
+      },
+      "2": {
+        "title": "Property title",
+        "location": "Tours, France",
+        "description": "Property description"
+      },
+      "3": {
+        "title": "Property title",
+        "location": "Tours, France",
+        "description": "Property description"
+      },
+      "4": {
+        "title": "Property title",
+        "location": "Tours, France",
+        "description": "Property description"
+      }
+    }
   },
   "footer": {
     "contact": "Contact",

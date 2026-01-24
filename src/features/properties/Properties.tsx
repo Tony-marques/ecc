@@ -10,6 +10,9 @@ interface Property {
   title: string;
   location: string;
   description: string;
+  titleKey?: string;
+  locationKey?: string;
+  descriptionKey?: string;
   image: string;
   airbnbUrl: string;
   capacity: number;
@@ -22,16 +25,22 @@ const properties: Property[] = [
     title: "Titre du bien",
     location: "Tours, France",
     description: "Description du bien",
+    titleKey: "properties.items.1.title",
+    locationKey: "properties.items.1.location",
+    descriptionKey: "properties.items.1.description",
     image: maison1,
     airbnbUrl: "https://www.airbnb.fr",
-    capacity: 6,
-    bedrooms: 3,
+    capacity: 4,
+    bedrooms: 2,
   },
   {
     id: 2,
     title: "Titre du bien",
     location: "Tours, France",
     description: "Description du bien",
+    titleKey: "properties.items.2.title",
+    locationKey: "properties.items.2.location",
+    descriptionKey: "properties.items.2.description",
     image: maison2,
     airbnbUrl: "https://www.airbnb.fr",
     capacity: 4,
@@ -42,6 +51,9 @@ const properties: Property[] = [
     title: "Titre du bien",
     location: "Tours, France",
     description: "Description du bien",
+    titleKey: "properties.items.3.title",
+    locationKey: "properties.items.3.location",
+    descriptionKey: "properties.items.3.description",
     image: maison3,
     airbnbUrl: "https://www.airbnb.fr",
     capacity: 8,
@@ -52,6 +64,9 @@ const properties: Property[] = [
     title: "Titre du bien",
     location: "Tours, France",
     description: "Description du bien",
+    titleKey: "properties.items.4.title",
+    locationKey: "properties.items.4.location",
+    descriptionKey: "properties.items.4.description",
     image: maison4,
     airbnbUrl: "https://www.airbnb.fr",
     capacity: 2,
@@ -84,18 +99,40 @@ export default function Properties() {
               className={styles.card}
             >
               <div className={styles.imageContainer}>
-                <img src={property.image} alt={property.title} />
+                <img
+                  src={property.image}
+                  alt={
+                    property.titleKey ? t(property.titleKey) : property.title
+                  }
+                />
                 <div className={styles.overlay}>
                   <span>{t("properties.viewOnAirbnb")}</span>
                 </div>
               </div>
               <div className={styles.content}>
-                <h3>{property.title}</h3>
-                <p className={styles.location}>📍 {property.location}</p>
-                <p className={styles.description}>{property.description}</p>
+                <h3>
+                  {property.titleKey ? t(property.titleKey) : property.title}
+                </h3>
+                <p className={styles.location}>
+                  📍{" "}
+                  {property.locationKey
+                    ? t(property.locationKey)
+                    : property.location}
+                </p>
+                <p className={styles.description}>
+                  {property.descriptionKey
+                    ? t(property.descriptionKey)
+                    : property.description}
+                </p>
                 <div className={styles.details}>
-                  <span>👥 {property.capacity} personnes</span>
-                  <span>🛏️ {property.bedrooms} chambres</span>
+                  <span>
+                    👥 {property.capacity} {t("properties.capacityLabel")}
+                    {property.capacity > 1 && "s"}
+                  </span>
+                  <span>
+                    🛏️ {property.bedrooms} {t("properties.bedroomsLabel")}
+                    {property.bedrooms > 1 && "s"}
+                  </span>
                 </div>
               </div>
             </a>

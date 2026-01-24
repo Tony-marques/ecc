@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
       { fr: "/politique-de-confidentialite", en: "/privacy-policy" },
     ];
     const match = mappings.find((m) => m.fr === pathname || m.en === pathname);
-    if (!match) return pathname; // default: keep current path if no mapping
+    if (!match) return pathname;
     return targetLang === "fr" ? match.fr : match.en;
   };
 
