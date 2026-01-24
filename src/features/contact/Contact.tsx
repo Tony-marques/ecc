@@ -41,7 +41,8 @@ export default function Contact() {
               <FaPhoneAlt className={styles.icon} />
               <div>
                 <h3>{t("contact.phone")}</h3>
-                <a href="tel:0699999999">06 75 88 41 03</a>
+                <a href="tel:0682117625">06 82 11 76 25</a>
+                <a href="tel:0675884103">06 75 88 41 03</a>
               </div>
             </div>
 

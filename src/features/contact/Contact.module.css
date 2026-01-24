@@ -92,6 +92,11 @@
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .infoItem .icon {

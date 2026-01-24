@@ -5,6 +5,7 @@
   padding: 1rem;
   gap: 4rem;
   align-items: flex-start;
+  color: var(--bg-primary);
 
   img {
     width: 250px;
@@ -12,7 +13,7 @@
   }
 
   .copyright {
-    color: white;
+    color: var(--bg-primary);
     font-size: 0.9rem;
     margin-top: 0.5rem;
     text-align: center;

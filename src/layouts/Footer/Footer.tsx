@@ -20,6 +20,7 @@ export default function Footer() {
         <h3>{t("footer.contact")}</h3>
         <div className={styles.phone}>
           <FaPhoneAlt />
+          <Link to="tel:0682117625">06 82 11 76 25</Link>-
           <Link to="tel:0675884103">06 75 88 41 03</Link>
         </div>
         {/* <div className={styles.address}>

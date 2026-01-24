@@ -41,6 +41,15 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   background: white;
+  color: #705141;
+}
+
+.formGroup select option {
+  color: #705141;
+}
+
+.formGroup select option:disabled {
+  color: #999;
 }
 
 .formGroup input:focus,
