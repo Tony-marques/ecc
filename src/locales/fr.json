@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "Qui sommes-nous ?",
+    "contact": "Contactez-nous",
+    "services": "Nos services",
+    "properties": "Consultez nos biens"
+  },
+  "home": {
+    "title": "Bienvenue",
+    "description": "Votre conciergerie spécialisée dans la location courte durée"
+  },
+  "about": {
+    "title": "Qui sommes-nous ?",
+    "intro": "Bienvenue chez Effet Coup de Cœur, votre conciergerie spécialisée dans la location courte durée.",
+    "teamIntro": "Derrière ce projet, il y a nous : une équipe de deux passionnés, chacun avec son univers.",
+    "teamHeading": "Notre équipe",
+    "laura": "Laura",
+    "lauraDesc": "Une passionnée du tourisme, qui connaît les attentes des voyageurs et qui se préoccupe de l'importance des petits détails afin de pouvoir transformer un séjour en une véritable expérience.",
+    "remi": "Rémi",
+    "remiDesc": "Amoureux de l’immobilier, Rémi accorde une attention particulière à la valorisation des biens, à la qualité des espaces et au soin apporté à chaque logement. Sa vision : révéler le potentiel de chaque lieu avec exigence et cohérence.",
+    "teamDescription1": "En associant nos deux passions, créer une conciergerie s'est imposé comme une évidence : un service où le bien-être des voyageurs et la gestion de votre logement se rencontrent.",
+    "teamDescription2": "Nous mettons notre expertise et notre passion au service de votre projet, avec une attention particulière portée à chaque détail pour créer l'Effet Coup de Cœur.",
+    "foundersConciergies": "Fondateurs & Concierges",
+    "forTravelers": "Pour les voyageurs",
+    "mission": "Notre mission : Créer l'Effet Coup de Cœur dès l'arrivée et jusqu'au départ.",
+    "travelers": "Nous voulons que nos voyageurs se sentent accueillis, rassurés, chouchoutés… et surtout qu'ils repartent avec l'envie de revenir.",
+    "forOwners": "Pour les propriétaires",
+    "ownersDesc": "Nous sommes là pour vous. Pour vous accompagner en toute confiance, vous soulager et vous offrir une tranquillité d'esprit totale.",
+    "regularFollow": "Suivi régulier",
+    "transparency": "Transparence",
+    "profitability": "Rentabilité",
+    "valuesConclusion": "sont nos maîtres mots dans la gestion de votre bien.",
+    "signature": "Parce que votre logement mérite la meilleure mise en valeur, et parce que vos voyageurs méritent une expérience qui dépasse leurs attentes, nous mettons du cœur dans chaque détail.",
+    "signature2": "C'est cette attention, cette rigueur et le mélange de nos passions qui font la signature Effet Coup de Cœur."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes à votre écoute pour répondre à toutes vos questions",
+    "coordinates": "Nos coordonnées",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "form": "Formulaire de contact",
+    "formTitle": "Envoyez-nous un message",
+    "name": "Nom",
+    "firstname": "Prénom",
+    "emailAddress": "Adresse email",
+    "phoneNumber": "Numéro de téléphone",
+    "subject": "Sujet",
+    "message": "Message",
+    "sendMessage": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "selectSubject": "Sélectionnez un sujet",
+    "infoRequest": "Demandes d'informations",
+    "trustProperty": "Confier un bien en gestion",
+    "becomeProvider": "Devenir prestataire (ménage, linge, maintenance)",
+    "partnership": "Partenariat / apporteur d'affaires",
+    "successMessage": "✓ Votre message a été envoyé avec succès !",
+    "errorMessage": "✗ Une erreur est survenue. Veuillez réessayer."
+  },
+  "properties": {
+    "title": "Consultez nos biens",
+    "description": "Découvrez notre sélection de propriétés de qualité",
+    "viewOnAirbnb": "Voir sur Airbnb"
+  },
+  "footer": {
+    "contact": "Contact",
+    "information": "Informations",
+    "legalNotice": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité"
+  }
+}

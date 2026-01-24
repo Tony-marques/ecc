@@ -3,6 +3,7 @@ import maison1 from "../../assets/images/maison1.jfif";
 import maison2 from "../../assets/images/maison2.jfif";
 import maison3 from "../../assets/images/maison3.jfif";
 import maison4 from "../../assets/images/maison4.jfif";
+import { useTranslation } from "react-i18next";
 
 interface Property {
   id: number;
@@ -59,12 +60,13 @@ const properties: Property[] = [
 ];
 
 export default function Properties() {
+  const { t } = useTranslation();
   return (
     <section className={styles.properties} id="consultez-nos-biens">
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>Consultez nos biens</h1>
-          <p>Découvrez notre sélection de logements de qualité</p>
+          <h1>{t("properties.title")}</h1>
+          <p>{t("properties.description")}</p>
         </div>
 
         <div className={styles.grid}>
@@ -79,7 +81,7 @@ export default function Properties() {
               <div className={styles.imageContainer}>
                 <img src={property.image} alt={property.title} />
                 <div className={styles.overlay}>
-                  <span>Voir sur Airbnb</span>
+                  <span>{t("properties.viewOnAirbnb")}</span>
                 </div>
               </div>
               <div className={styles.content}>

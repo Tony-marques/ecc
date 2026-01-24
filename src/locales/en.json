@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "services": "Our Services",
+    "properties": "View Our Properties"
+  },
+  "home": {
+    "title": "Welcome",
+    "description": "Your concierge service specialized in short-term rentals"
+  },
+  "about": {
+    "title": "About Us",
+    "intro": "Welcome to Effet Coup de Cœur, your concierge service specialized in short-term rentals.",
+    "teamIntro": "Behind this project, there is us: a team of two passionate people, each with their own universe.",
+    "teamHeading": "Our Team",
+    "laura": "Laura",
+    "lauraDesc": "A tourism enthusiast who understands the expectations of travelers and cares about the importance of every detail to transform a stay into a truly memorable experience.",
+    "remi": "Rémi",
+    "remiDesc": "A real estate lover, Rémi pays special attention to showcasing properties, the quality of spaces, and the care given to every home. His vision: reveal each place's potential with rigor and coherence.",
+    "teamDescription1": "By combining our two passions, creating a concierge service became obvious: a service where the well-being of travelers and the management of your property meet.",
+    "teamDescription2": "We put our expertise and passion at the service of your project, with special attention to every detail to create the Effet Coup de Cœur experience.",
+    "foundersConciergies": "Founders & Concierges",
+    "forTravelers": "For Travelers",
+    "mission": "Our mission: Create the Effet Coup de Cœur from arrival to departure.",
+    "travelers": "We want our travelers to feel welcomed, reassured, pampered... and most importantly, to leave wanting to come back.",
+    "forOwners": "For Property Owners",
+    "ownersDesc": "We are here for you. To support you with confidence, relieve you and give you complete peace of mind.",
+    "regularFollow": "Regular Follow-up",
+    "transparency": "Transparency",
+    "profitability": "Profitability",
+    "valuesConclusion": "are our core values in managing your property.",
+    "signature": "Because your property deserves the best enhancement, and because your travelers deserve an experience that exceeds their expectations, we put our hearts into every detail.",
+    "signature2": "This attention to detail, this rigor and the blend of our passions are what make the Effet Coup de Cœur signature."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to answer all your questions",
+    "coordinates": "Our Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "form": "Contact Form",
+    "formTitle": "Send Us a Message",
+    "name": "Name",
+    "firstname": "First Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "selectSubject": "Select a subject",
+    "infoRequest": "Information Request",
+    "trustProperty": "Property Management",
+    "becomeProvider": "Become a Service Provider (cleaning, linen, maintenance)",
+    "partnership": "Partnership / Business Referral",
+    "successMessage": "✓ Your message has been sent successfully!",
+    "errorMessage": "✗ An error occurred. Please try again."
+  },
+  "properties": {
+    "title": "View Our Properties",
+    "description": "Discover our selection of quality properties",
+    "viewOnAirbnb": "View on Airbnb"
+  },
+  "footer": {
+    "contact": "Contact",
+    "information": "Information",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
+  }
+}

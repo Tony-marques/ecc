@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import NavItem from "./NavItem";
+import LanguageSwitcher from "./LanguageSwitcher";
 import styles from "./Navbar.module.css";
 import logo from "../../assets/images/logo.png";
 
@@ -9,33 +11,34 @@ interface NavItemConfig {
   className?: string;
 }
 
-const NAVBAR_CONFIGS: NavItemConfig[] = [
-  {
-    label: "Accueil",
-    path: "/",
-  },
-  {
-    label: "Qui sommes-nous ?",
-    path: "qui-sommes-nous",
-  },
-  {
-    label: "Contactez-nous",
-    path: "contactez-nous",
-  },
-  {
-    label: "Nos services",
-    path: "nos-services",
-  },
-  {
-    label: "Consultez nos biens",
-    path: "consultez-nos-biens",
-    className: "biens",
-  },
-];
-
 export default function Navbar() {
+  const { t } = useTranslation();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+
+  const NAVBAR_CONFIGS: NavItemConfig[] = [
+    {
+      label: t("nav.home"),
+      path: "/",
+    },
+    {
+      label: t("nav.about"),
+      path: "qui-sommes-nous",
+    },
+    {
+      label: t("nav.contact"),
+      path: "contactez-nous",
+    },
+    {
+      label: t("nav.services"),
+      path: "nos-services",
+    },
+    {
+      label: t("nav.properties"),
+      path: "consultez-nos-biens",
+      className: "biens",
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +70,7 @@ export default function Navbar() {
           <NavItem key={item.path} {...item} />
         ))}
       </ul>
+      <LanguageSwitcher />
     </nav>
   );
 }

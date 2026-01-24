@@ -1,448 +1,172 @@
-.about {
-  padding: 3rem 1rem;
-  /* background: #f8f9fa; */
+.team-section {
+  background-color: #f6efe9;
+  padding: 20px 20px 40px 20px;
+  color: #705141;
 }
 
-.container {
+.team-container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.header {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
-.header h1 {
-  color: var(--font-primary);
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.team-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  /* color: #705141; */
 }
 
-.intro {
-  color: #666;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  /* max-width: 800px; */
-  margin: 0 auto;
+.team-intro {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  font-size: 16px;
+  color: #705141;
 }
 
-.teamSection {
-  margin-bottom: 2rem;
+.header-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 60px;
 }
 
-.teamIntro {
-  text-align: center;
-  color: #555;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
-  font-style: italic;
+.header-divider span {
+  width: 120px;
+  height: 1px;
+  background-color: #705141;
 }
 
-.teamPresentation {
+.divider-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50%;
+  background-color: #705141 !important;
+  margin: 0 8px;
+}
+
+.team-content {
   display: grid;
-  grid-template-columns: 1fr 0.9fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 32px;
   align-items: center;
-  justify-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 40px;
 }
 
-.teamHeading {
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 700;
+.team-portrait {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-bottom: 1.5rem;
 }
 
-.memberColumn {
+.team-portrait img {
+  max-width: 340px;
+  /* object-fit: c; */
+  /* max-height: 400px; */
   width: 100%;
-  display: flex;
-  justify-content: center;
+  border-radius: 180px 180px 0 0;
+  border: 1px solid #705141;
+  border-bottom: none;
 }
 
-.teamLeftColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.teamDescription {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.teamMembers h2 {
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.teamDescription p {
-  color: #555;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  text-align: center;
-  max-width: 800px;
-  /* text-align: center; */
-  /* max-width: 95%; */
-}
-
-.teamDescription strong {
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-.teamImageContainer {
-  border-radius: 800px 800px 0 0;
-  overflow: hidden;
-  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  border: 3px solid var(--primary-color);
-  position: relative;
-  background: white;
-}
-
-.teamImageContainer::after {
-  content: "Fondateurs & Concierges";
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-.teamImage {
-  width: auto;
-  height: auto;
+.team-role {
   display: block;
-  object-fit: contain;
-  max-height: 500px;
-
+  padding: 0.75rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  /* text-transform: uppercase; */
+  color: #705141;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #705141;
+  border-top: none;
+  font-family: "Playfair Display", serif;
 }
 
-.teamMembers {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.member {
-  /* background: white; */
-  /* border: 1px solid var(--primary-color); */
-  border-radius: 600px 600px 0 0;
-  padding: 1.5rem;
-  padding-top: 50px;
+.team-profile {
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15); */
+  padding: 0 20px;
 }
 
-.member h3 {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.team-profile h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #705141;
 }
 
-.member p {
-  color: #666;
-  line-height: 1.8;
-  font-size: 1rem;
+.team-title {
+  display: block;
+  font-size: 18px;
+  color: #705141;
+  margin-bottom: 20px;
 }
 
-.teamConclusion {
-  text-align: center;
-  color: #555;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  background: white;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15);
-}
-
-.missionText strong {
-  color: var(--secondary-color);
-}
-
-.servicesSection {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.serviceBlock {
-  background: white;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15);
-}
-
-.serviceHeader {
+.profile-divider {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #e8e8e8;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 25px;
 }
 
-.serviceIcon {
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-  opacity: 0.8;
+.profile-divider span {
+  width: calc(100% / 2 - 25px);
+  height: 1px;
+  background-color: #705141;
 }
 
-.serviceBlock h2 {
-  color: var(--primary-color);
-  font-size: 1.75rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  margin: 0;
-  font-family: "Nunito", sans-serif;
-}
-
-.serviceContent {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding-left: 2.5rem;
-}
-
-@media (max-width: 768px) {
-  .serviceContent {
-    padding-left: 0;
-  }
-}
-
-.serviceContent p {
-  color: #666;
-  line-height: 1.9;
-  font-size: 1.05rem;
-  margin: 0;
-  font-weight: 400;
-}
-
-.serviceMission {
-  font-size: 1.1rem;
-  color: #444;
-  font-weight: 500;
-  line-height: 1.85;
-}
-
-.serviceContent strong {
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-.values {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  gap: 0.25rem;
-  margin: 0.5rem 0;
-  line-height: 1.9;
-  font-size: 1.05rem;
-  white-space: nowrap;
-}
-
-.valuesList {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  gap: 0.25rem;
-  white-space: nowrap;
-}
-
-.valueItem {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  color: #555;
-  font-weight: 500;
-  font-size: 1.05rem;
-}
-
-.valueIcon {
-  color: var(--secondary-color);
-  font-size: 1.1rem;
-  opacity: 0.9;
-  flex-shrink: 0;
-  vertical-align: baseline;
-  display: inline-block;
-  position: relative;
-  top: 0.15em;
-}
-
-.valuesSeparator {
-  color: #555;
-  font-weight: 500;
-  font-size: 1.05rem;
-}
-
-.valuesConclusion {
-  color: #666;
-  font-size: 1.05rem;
-  font-weight: 400;
-  font-style: italic;
-  margin-left: 0.25rem;
-}
-
-.signature {
-  text-align: center;
-  padding: 2.5rem;
-  background: white;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0 2px 12px rgba(155, 125, 98, 0.15);
-}
-
-.heartIcon {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-  margin: 1rem;
-  animation: heartbeat 2s ease-in-out infinite;
-}
-
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-.signature p {
-  color: #555;
-  font-size: 1.2rem;
+.team-profile p {
+  font-size: 18px;
   line-height: 1.8;
+  color: #705141;
+  text-align: center;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.team-signature {
+  /* margin-top: 60px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-signature span {
+  width: 100px;
+  height: 1px;
+  background-color: #705141;
+}
+
+.team-signature em {
   font-style: italic;
+  color: #705141;
+  font-size: 20px;
+  white-space: nowrap;
 }
 
-.signature strong {
-  color: var(--primary-color);
-  font-weight: 700;
-}
-
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 2rem;
-  }
-
-  .intro {
-    font-size: 1rem;
-  }
-
-  .teamMembers {
+/* Responsive */
+@media (max-width: 1024px) {
+  .team-content {
     grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-  .teamPresentation {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .team-portrait {
+    order: -1;
   }
 
-  .teamLeftColumn {
-    gap: 1.5rem;
+  .team-header h2 {
+    font-size: 34px;
   }
 
-  .teamMembers h2 {
-    font-size: 1.5rem;
-  }
-
-  .teamDescription p {
-    font-size: 1rem;
-  }
-
-  .teamImageContainer {
-    height: auto;
-    min-height: 400px;
-    margin-bottom: 2rem;
-    border-radius: 0.5rem;
-  }
-
-  .teamImage {
-    height: auto;
-    max-height: 500px;
-  }
-
-  .missionSection h2 {
-    font-size: 1.5rem;
-  }
-
-  .missionText {
-    font-size: 1.1rem;
-  }
-
-  .serviceBlock {
-    padding: 1.5rem;
-  }
-
-  .serviceHeader {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .serviceContent {
-    padding-left: 0;
-    gap: 1rem;
-  }
-
-  .values {
-    flex-wrap: wrap;
-    white-space: normal;
-  }
-
-  .valuesList {
-    flex-wrap: wrap;
-    white-space: normal;
-  }
-
-  .serviceBlock h2 {
-    font-size: 1.5rem;
-  }
-
-  .serviceContent p {
-    font-size: 1rem;
-  }
-
-  .serviceMission {
-    font-size: 1.05rem;
-  }
-
-  .signature p {
-    font-size: 1rem;
+  .team-portrait img {
+    max-width: 280px;
   }
 }

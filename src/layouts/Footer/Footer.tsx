@@ -1,17 +1,20 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import styles from "./Footer.module.css";
 import { MdEmail } from "react-icons/md";
 import logo from "../../assets/images/logo.svg";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.footer}>
       <div className={styles.logoWrapper}>
         <img src={logo} alt="logo" />
       </div>
       <div className={styles.middle}>
-        <h3>Contact</h3>
+        <h3>{t("footer.contact")}</h3>
         <div className={styles.phone}>
           <FaPhoneAlt />
           <Link to="tel:0675884103">06 75 88 41 03</Link>
@@ -28,10 +31,10 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.right}>
-        <h3>Informations</h3>
-        <Link to="/mentions-legales">Mentions légales</Link>
+        <h3>{t("footer.information")}</h3>
+        <Link to="/mentions-legales">{t("footer.legalNotice")}</Link>
         <Link to="/politique-de-confidentialite">
-          Politique de confidentialité
+          {t("footer.privacyPolicy")}
         </Link>
       </div>
     </div>

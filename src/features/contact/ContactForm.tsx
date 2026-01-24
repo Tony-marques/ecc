@@ -1,6 +1,7 @@
 import emailjs from "emailjs-com";
 import type { FormEvent } from "react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./ContactForm.module.css";
 
 interface FormData {
@@ -12,6 +13,7 @@ interface FormData {
 }
 
 export default function ContactForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -85,7 +87,7 @@ export default function ContactForm() {
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit}>
       <div className={styles.formGroup}>
-        <label htmlFor="name">Nom complet *</label>
+        <label htmlFor="name">{t("contact.name")} *</label>
         <input
           type="text"
           id="name"
@@ -93,13 +95,13 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          placeholder="Votre nom"
+          placeholder={t("contact.name")}
         />
       </div>
 
       <div className={styles.formRow}>
         <div className={styles.formGroup}>
-          <label htmlFor="email">Email *</label>
+          <label htmlFor="email">{t("contact.emailAddress")} *</label>
           <input
             type="email"
             id="email"
@@ -107,12 +109,12 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            placeholder="votre@email.com"
+            placeholder="abc@email.com"
           />
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="phone">Téléphone</label>
+          <label htmlFor="phone">{t("contact.phoneNumber")}</label>
           <input
             type="tel"
             id="phone"
@@ -125,7 +127,7 @@ export default function ContactForm() {
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="subject">Sujet *</label>
+        <label htmlFor="subject">{t("contact.subject")} *</label>
         <select
           id="subject"
           name="subject"
@@ -133,22 +135,20 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         >
-          <option value="">Sélectionnez un sujet</option>
+          <option value="">{t("contact.selectSubject")}</option>
           <option value="demandes d'informations">
-            Demandes d'informations
+            {t("contact.infoRequest")}
           </option>
-          <option value="confier bien">Confier un bien en gestion </option>
+          <option value="confier bien">{t("contact.trustProperty")}</option>
           <option value="devenir prestataire">
-            Devenir prestataire (ménage, linge, maintenance)
+            {t("contact.becomeProvider")}
           </option>
-          <option value="partenariat">
-            Partenariat / apporteur d'affaires
-          </option>
+          <option value="partenariat">{t("contact.partnership")}</option>
         </select>
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="message">Message *</label>
+        <label htmlFor="message">{t("contact.message")} *</label>
         <textarea
           id="message"
           name="message"
@@ -156,20 +156,18 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={6}
-          placeholder="Votre message..."
+          placeholder={t("contact.message")}
         />
       </div>
 
       {submitStatus === "success" && (
         <div className={styles.successMessage}>
-          ✓ Votre message a été envoyé avec succès !
+          {t("contact.successMessage")}
         </div>
       )}
 
       {submitStatus === "error" && (
-        <div className={styles.errorMessage}>
-          ✗ Une erreur est survenue. Veuillez réessayer.
-        </div>
+        <div className={styles.errorMessage}>{t("contact.errorMessage")}</div>
       )}
 
       <button
@@ -177,7 +175,7 @@ export default function ContactForm() {
         className={styles.submitButton}
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+        {isSubmitting ? t("contact.sending") : t("contact.sendMessage")}
       </button>
     </form>
   );
