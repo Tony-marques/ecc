@@ -109,5 +109,56 @@
     "data1": "The information collected via the site www.ecdconciergerie.fr (contact form, email address) is recorded by SAS Effet Coup de Cœur – Concierge Service in order to respond to user requests.",
     "data2": "In accordance with the General Data Protection Regulation (GDPR), users have the right to access, rectify, object to, and delete their personal data.",
     "data3": "These rights can be exercised by sending a request to:"
+  },
+  "services": {
+    "title": "Our Services",
+    "valorization": {
+      "title": "Property Valorization",
+      "point1": "Showcasing your property to attract travelers",
+      "point2": "Creating and optimizing listings on rental platforms",
+      "point3": "Pricing analysis and regular adjustments to maximize profitability"
+    },
+    "welcome": {
+      "title": "Traveler Welcome & Support",
+      "point1": "Personalized communication with your guests",
+      "point2": "Secure arrival and departure management",
+      "point3": "Complete supervision of the experience to ensure excellent reviews"
+    },
+    "dailyFollowUp": {
+      "title": "Daily Property Management",
+      "point1": "Inspection and cleaning after each stay",
+      "point2": "Regular maintenance with our trusted local team",
+      "point3": "Quick response to any issues for your peace of mind"
+    },
+    "launchFees": {
+      "title": "Property Launch Fees",
+      "intro": "To prepare your property for short-term rental and list it on platforms in the best conditions, we offer a complete launch package including:",
+      "point1": "Personalized property assessment and rental potential analysis",
+      "point2": "Local market analysis and pricing positioning",
+      "point3": "Optimization recommendations: furnishings, décor, layout",
+      "point4": "Complete listing creation on rental platforms",
+      "point5": "Professional photography to showcase your property",
+      "point6": "Guest welcome guide preparation",
+      "point7": "Purchase and installation of secure key boxes"
+    },
+    "secondaryResidence": {
+      "title": "Secondary Residence Services",
+      "point1": "Regular inspection visits to check property condition",
+      "point2": "Ventilation and routine maintenance to keep the home healthy",
+      "point3": "Watering and outdoor maintenance according to season",
+      "point4": "Mail collection so you don't miss anything",
+      "point5": "Cleaning before and after your stays",
+      "point6": "Complete property preparation before your arrival",
+      "point7": "Management of repairs and maintenance tasks for an always-operational home",
+      "note": "With our services, your secondary residence is ready to welcome you at any time, without stress or unexpected issues."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "content": "To learn about the exact amount of commissions and launch fees, please contact us directly, as they depend on the location and characteristics of your property."
+    },
+    "custom": {
+      "title": "Custom Services",
+      "content": "Need a service not listed above? Don't hesitate to let us know, we also provide custom services tailored to our clients' specific needs."
+    }
   }
 }

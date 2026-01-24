@@ -109,5 +109,56 @@
     "data1": "Les informations recueillies via le site www.ecdconciergerie.fr (formulaire de contact, adresse email) sont enregistrées par la SAS Effet Coup de Cœur – Conciergerie afin de répondre aux demandes des utilisateurs.",
     "data2": "Conformément au Règlement Général sur la Protection des Données (RGPD), les utilisateurs disposent d'un droit d'accès, de rectification, d'opposition et de suppression des données les concernant.",
     "data3": "Ces droits peuvent être exercés en adressant une demande à :"
+  },
+  "services": {
+    "title": "Nos services",
+    "valorization": {
+      "title": "Valorisation de votre bien",
+      "point1": "Mise en valeur de votre logement pour attirer les voyageurs",
+      "point2": "Création et optimisation de l'annonce sur les plateformes",
+      "point3": "Étude tarifaire et ajustements réguliers pour maximiser votre rentabilité"
+    },
+    "welcome": {
+      "title": "Accueil et suivi des voyageurs",
+      "point1": "Communication personnalisée avec vos locataires",
+      "point2": "Gestion sécurisée des arrivées et départs",
+      "point3": "Supervision complète de l'expérience pour garantir d'excellentes évaluations"
+    },
+    "dailyFollowUp": {
+      "title": "Suivi quotidien du logement",
+      "point1": "Inspection et ménage après chaque séjour",
+      "point2": "Entretien régulier avec notre équipe locale de confiance",
+      "point3": "Gestion rapide des imprévus pour votre sérénité"
+    },
+    "launchFees": {
+      "title": "Frais de lancement du logement",
+      "intro": "Pour préparer votre bien à la location courte durée et le mettre sur les plateformes dans les meilleures conditions, nous proposons un forfait de lancement complet incluant :",
+      "point1": "Étude personnalisée du logement et de son potentiel locatif",
+      "point2": "Analyse du marché local et du positionnement tarifaire",
+      "point3": "Conseils d'optimisation : équipements, décoration, aménagement",
+      "point4": "Création complète de l'annonce sur les plateformes de location",
+      "point5": "Prise de photos pour valoriser votre logement",
+      "point6": "Préparation du livret d'accueil pour vos voyageurs",
+      "point7": "Achat et installation des boîtes à clés sécurisées"
+    },
+    "secondaryResidence": {
+      "title": "Services pour résidence secondaire",
+      "point1": "Visites de contrôle régulières pour vérifier l'état du logement",
+      "point2": "Aération et entretien courant pour garder la maison saine",
+      "point3": "Arrosage et entretien extérieur selon la saison",
+      "point4": "Relevé du courrier pour ne rien manquer",
+      "point5": "Ménage avant et après vos séjours",
+      "point6": "Préparation complète du logement avant votre arrivée",
+      "point7": "Gestion de dépannage et de petits travaux pour une maison toujours opérationnelle",
+      "note": "Avec nos services, votre résidence secondaire est prête à vous accueillir à tout moment, sans stress ni imprévus."
+    },
+    "pricing": {
+      "title": "Tarification",
+      "content": "Pour connaître le montant exact des commissions ainsi que des frais de lancement, merci de nous contacter directement, car elles dépendent de la localisation et des caractéristiques de votre logement."
+    },
+    "custom": {
+      "title": "Services sur mesure",
+      "content": "Besoin d'une prestation qui n'est pas dans la liste ? N'hésitez pas à nous le faire savoir, nous réalisons également des services sur mesure selon les besoins de nos clients."
+    }
   }
 }
