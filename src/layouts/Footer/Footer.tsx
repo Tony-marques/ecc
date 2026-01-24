@@ -12,6 +12,9 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.logoWrapper}>
         <img src={logo} alt="logo" />
+        <p className={styles.copyright}>
+          Copyright © {new Date().getFullYear()} Effet Coup de Cœur
+        </p>
       </div>
       <div className={styles.middle}>
         <h3>{t("footer.contact")}</h3>

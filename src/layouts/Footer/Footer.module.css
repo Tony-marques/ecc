@@ -11,6 +11,13 @@
     height: auto;
   }
 
+  .copyright {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
   h3 {
     color: var(--bg-primary);
     font-size: 1.5rem;
