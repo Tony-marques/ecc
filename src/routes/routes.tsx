@@ -13,12 +13,22 @@ export const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      // Routes françaises
       {
         path: "/mentions-legales",
         element: <LegalNotice />,
       },
       {
         path: "/politique-de-confidentialite",
+        element: <PrivacyPolicy />,
+      },
+      // Routes anglaises (même composant, l'i18n gère le contenu)
+      {
+        path: "/legal-notice",
+        element: <LegalNotice />,
+      },
+      {
+        path: "/privacy-policy",
         element: <PrivacyPolicy />,
       },
     ],

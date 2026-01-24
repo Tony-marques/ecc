@@ -6,7 +6,11 @@ import { MdEmail } from "react-icons/md";
 import logo from "../../assets/images/logo.svg";
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // URLs adaptées selon la langue
+  const legalNoticeUrl = i18n.language === 'fr' ? '/mentions-legales' : '/legal-notice';
+  const privacyPolicyUrl = i18n.language === 'fr' ? '/politique-de-confidentialite' : '/privacy-policy';
 
   return (
     <div className={styles.footer}>
@@ -36,8 +40,8 @@ export default function Footer() {
       </div>
       <div className={styles.right}>
         <h3>{t("footer.information")}</h3>
-        <Link to="/mentions-legales">{t("footer.legalNotice")}</Link>
-        <Link to="/politique-de-confidentialite">
+        <Link to={legalNoticeUrl}>{t("footer.legalNotice")}</Link>
+        <Link to={privacyPolicyUrl}>
           {t("footer.privacyPolicy")}
         </Link>
       </div>
