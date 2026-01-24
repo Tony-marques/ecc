@@ -15,10 +15,14 @@
     "intro": "Bienvenue chez Effet Coup de Cœur, votre conciergerie spécialisée dans la location courte durée.",
     "teamIntro": "Derrière ce projet, il y a nous : une équipe de deux passionnés, chacun avec son univers.",
     "teamHeading": "Notre équipe",
+    "teamTagline": "Deux regards complémentaires, une même exigence d'excellence.",
     "laura": "Laura",
+    "lauraTitle": "Co-fondatrice – Expérience & hospitalité",
     "lauraDesc": "Une passionnée du tourisme, qui connaît les attentes des voyageurs et qui se préoccupe de l'importance des petits détails afin de pouvoir transformer un séjour en une véritable expérience.",
     "remi": "Rémi",
+    "remiTitle": "Co-fondateur – Immobilier & valorisation",
     "remiDesc": "Amoureux de l’immobilier, Rémi accorde une attention particulière à la valorisation des biens, à la qualité des espaces et au soin apporté à chaque logement. Sa vision : révéler le potentiel de chaque lieu avec exigence et cohérence.",
+    "portraitAlt": "Rémi et Laura – Fondateurs Effet Coup de Cœur",
     "teamDescription1": "En associant nos deux passions, créer une conciergerie s'est imposé comme une évidence : un service où le bien-être des voyageurs et la gestion de votre logement se rencontrent.",
     "teamDescription2": "Nous mettons notre expertise et notre passion au service de votre projet, avec une attention particulière portée à chaque détail pour créer l'Effet Coup de Cœur.",
     "foundersConciergies": "Fondateurs & Concierges",
@@ -32,7 +36,8 @@
     "profitability": "Rentabilité",
     "valuesConclusion": "sont nos maîtres mots dans la gestion de votre bien.",
     "signature": "Parce que votre logement mérite la meilleure mise en valeur, et parce que vos voyageurs méritent une expérience qui dépasse leurs attentes, nous mettons du cœur dans chaque détail.",
-    "signature2": "C'est cette attention, cette rigueur et le mélange de nos passions qui font la signature Effet Coup de Cœur."
+    "signature2": "C'est cette attention, cette rigueur et le mélange de nos passions qui font la signature Effet Coup de Cœur.",
+    "teamSignature": "L'élégance d'un lieu, la sérénité d'un service."
   },
   "contact": {
     "title": "Contactez-nous",

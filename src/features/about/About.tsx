@@ -18,10 +18,8 @@ export default function About() {
     <section className={styles["team-section"]} id="notre-equipe">
       <div className={styles["team-container"]}>
         <header className={styles["team-header"]}>
-          <h2>Notre équipe</h2>
-          <p className={styles["team-intro"]}>
-            Deux regards complémentaires, une même exigence d'excellence.
-          </p>
+          <h2>{t("about.teamHeading")}</h2>
+          <p className={styles["team-intro"]}>{t("about.teamTagline")}</p>
           <div className={styles["header-divider"]}>
             <span></span>
             <span className={styles["divider-dot"]}></span>
@@ -31,52 +29,40 @@ export default function About() {
 
         <div className={styles["team-content"]}>
           <div className={styles["team-profile"]}>
-            <h3>Rémi</h3>
-            <span className={styles["team-title"]}>
-              Co-fondateur – Immobilier & valorisation
-            </span>
+            <h3>{t("about.remi")}</h3>
+            <span className={styles["team-title"]}>{t("about.remiTitle")}</span>
             <div className={styles["profile-divider"]}>
               <span></span>
               <span className={styles["divider-dot"]}></span>
               <span></span>
             </div>
-            <p>
-              Amoureux de l'immobilier, Rémi accorde une attention particulière
-              à la valorisation des biens, à la qualité des espaces et au soin
-              apporté à chaque logement. Sa vision : révéler le potentiel de
-              chaque lieu avec exigence et cohérence.
-            </p>
+            <p>{t("about.remiDesc")}</p>
           </div>
 
           <div className={styles["team-portrait"]}>
-            <img
-              src={equipeImage}
-              alt="Rémi et Laura – Fondateurs Effet Coup de Cœur"
-            />
-            <span className={styles["team-role"]}>Fondateurs & Concierges</span>
+            <img src={equipeImage} alt={t("about.portraitAlt")} />
+            <span className={styles["team-role"]}>
+              {t("about.foundersConciergies")}
+            </span>
           </div>
 
           <div className={styles["team-profile"]}>
-            <h3>Laura</h3>
+            <h3>{t("about.laura")}</h3>
             <span className={styles["team-title"]}>
-              Co-fondatrice – Expérience & hospitalité
+              {t("about.lauraTitle")}
             </span>
             <div className={styles["profile-divider"]}>
               <span></span>
               <span className={styles["divider-dot"]}></span>
               <span></span>
             </div>
-            <p>
-              Une passionnée du tourisme, qui connaît les attentes des voyageurs
-              et qui se préoccupe de l'importance des petits détails afin de
-              pouvoir transformer un séjour en une véritable expérience.
-            </p>
+            <p>{t("about.lauraDesc")}</p>
           </div>
         </div>
 
         <div className={styles["team-signature"]}>
           <span></span>
-          <em>L'élégance d'un lieu, la sérénité d'un service.</em>
+          <em>{t("about.teamSignature")}</em>
           <span></span>
         </div>
       </div>

@@ -15,10 +15,14 @@
     "intro": "Welcome to Effet Coup de Cœur, your concierge service specialized in short-term rentals.",
     "teamIntro": "Behind this project, there is us: a team of two passionate people, each with their own universe.",
     "teamHeading": "Our Team",
+    "teamTagline": "Two complementary perspectives, one shared standard of excellence.",
     "laura": "Laura",
+    "lauraTitle": "Co-founder – Experience & hospitality",
     "lauraDesc": "A tourism enthusiast who understands the expectations of travelers and cares about the importance of every detail to transform a stay into a truly memorable experience.",
     "remi": "Rémi",
+    "remiTitle": "Co-founder – Real estate & showcasing",
     "remiDesc": "A real estate lover, Rémi pays special attention to showcasing properties, the quality of spaces, and the care given to every home. His vision: reveal each place's potential with rigor and coherence.",
+    "portraitAlt": "Rémi and Laura – Effet Coup de Cœur founders",
     "teamDescription1": "By combining our two passions, creating a concierge service became obvious: a service where the well-being of travelers and the management of your property meet.",
     "teamDescription2": "We put our expertise and passion at the service of your project, with special attention to every detail to create the Effet Coup de Cœur experience.",
     "foundersConciergies": "Founders & Concierges",
@@ -32,7 +36,8 @@
     "profitability": "Profitability",
     "valuesConclusion": "are our core values in managing your property.",
     "signature": "Because your property deserves the best enhancement, and because your travelers deserve an experience that exceeds their expectations, we put our hearts into every detail.",
-    "signature2": "This attention to detail, this rigor and the blend of our passions are what make the Effet Coup de Cœur signature."
+    "signature2": "This attention to detail, this rigor and the blend of our passions are what make the Effet Coup de Cœur signature.",
+    "teamSignature": "The elegance of a place, the serenity of a service."
   },
   "contact": {
     "title": "Contact Us",
