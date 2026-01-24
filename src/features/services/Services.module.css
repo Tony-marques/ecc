@@ -1,6 +1,6 @@
 .services-section {
   background-color: #f6efe9;
-  padding: 100px 20px;
+  padding: 40px 20px;
   color: #705141;
 }
 
@@ -52,14 +52,11 @@
 }
 
 .services-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-  align-items: start;
-}
-
-.service-card:last-child {
-  grid-column: 2 / 3;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .service-card {
@@ -68,6 +65,31 @@
   padding: 2rem;
   box-shadow: 0 2px 12px rgba(112, 81, 65, 0.08);
   transition: all 0.3s ease;
+  flex: 1 1 320px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.service-card.long {
+  flex: 1 1 48%;
+  max-width: 48%;
+  min-width: 320px;
+}
+
+.pricing-card {
+  order: 5;
+  flex: 1 1 48%;
+  max-width: 48%;
+  min-width: 320px;
+}
+
+.custom-card {
+  order: 6;
+  flex: 1 1 48%;
+  max-width: 48%;
+  min-width: 320px;
 }
 
 .service-card h3 {

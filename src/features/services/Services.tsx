@@ -63,7 +63,7 @@ export default function Services() {
           </div>
 
           {/* Frais de lancement */}
-          <div className={styles["service-card"]}>
+          <div className={`${styles["service-card"]} ${styles.long}`}>
             <h3>{t("services.launchFees.title")}</h3>
             <div className={styles["service-divider"]}>
               <span></span>
@@ -83,7 +83,7 @@ export default function Services() {
           </div>
 
           {/* Résidence secondaire */}
-          <div className={styles["service-card"]}>
+          <div className={`${styles["service-card"]} ${styles.long}`}>
             <h3>{t("services.secondaryResidence.title")}</h3>
             <div className={styles["service-divider"]}>
               <span></span>
@@ -105,7 +105,9 @@ export default function Services() {
           </div>
 
           {/* Tarifs */}
-          <div className={styles["service-card"]}>
+          <div
+            className={`${styles["service-card"]} ${styles["pricing-card"]}`}
+          >
             <h3>{t("services.pricing.title")}</h3>
             <div className={styles["service-divider"]}>
               <span></span>
@@ -116,7 +118,7 @@ export default function Services() {
           </div>
 
           {/* Services sur mesure */}
-          <div className={styles["service-card"]}>
+          <div className={`${styles["service-card"]} ${styles["custom-card"]}`}>
             <h3>{t("services.custom.title")}</h3>
             <div className={styles["service-divider"]}>
               <span></span>
