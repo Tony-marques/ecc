@@ -2,27 +2,23 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-  /* padding: 1.5rem; */
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .formRow {
-    grid-template-columns: 1fr;
-  }
+  box-sizing: border-box;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  box-sizing: border-box;
 }
 
 .formGroup label {
@@ -41,6 +37,8 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   background: white;
+  box-sizing: border-box;
+  width: 100%;
   color: #705141;
 }
 
@@ -76,6 +74,7 @@
   font-family: "Nunito", sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-sizing: border-box;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -101,7 +100,7 @@
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #c3e6cb;
-  font-weight: 500;
+  box-sizing: border-box;
 }
 
 .errorMessage {
@@ -111,4 +110,43 @@
   border-radius: 0.5rem;
   border: 1px solid #f5c6cb;
   font-weight: 500;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .contactForm {
+    gap: 1rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .formGroup label {
+    font-size: 0.9rem;
+  }
+
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    padding: 0.5rem 0.75rem;
+    font-size: 16px;
+  }
+
+  .formGroup textarea {
+    min-height: 100px;
+  }
+
+  .submitButton {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  .successMessage,
+  .errorMessage {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
 }

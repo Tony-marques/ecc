@@ -1,9 +1,10 @@
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   background-color: #f6efe9;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .header {
@@ -24,6 +25,7 @@
   font-size: 16px;
   max-width: 600px;
   margin: 0 auto 35px;
+  box-sizing: border-box;
 }
 
 .headerDivider {
@@ -32,12 +34,14 @@
   justify-content: center;
   gap: 0;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .headerDivider span {
   width: 120px;
   height: 1px;
   background-color: #705141;
+  flex-shrink: 0;
 }
 
 .headerDivider span:first-child {
@@ -54,6 +58,7 @@
   background-color: #705141 !important;
   margin: 0 8px;
   transform: rotate(45deg);
+  flex-shrink: 0;
 }
 
 .content {
@@ -61,6 +66,7 @@
   grid-template-columns: 0.75fr 1.5fr;
   gap: 3rem;
   align-items: start;
+  box-sizing: border-box;
 }
 
 @media (max-width: 968px) {
@@ -86,17 +92,20 @@
   flex-direction: column;
   gap: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .infoItem {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+}
 
-  div {
-    display: flex;
-    flex-direction: column;
-  }
+.infoItem div {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .infoItem .icon {
@@ -118,6 +127,7 @@
   text-decoration: none;
   line-height: 1.6;
   transition: color 0.3s ease;
+  word-break: break-word;
 }
 
 .infoItem a:hover {
@@ -126,14 +136,21 @@
 
 .formContainer {
   background: white;
-  /* border: 1px solid #705141; */
   border-radius: 0.5rem;
   padding: 1.5rem;
-  /* box-shadow: 0 2px 12px rgba(112, 81, 65, 0.15); */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
   .header h1 {
     font-size: 2rem;
   }
@@ -142,12 +159,65 @@
     font-size: 1rem;
   }
 
-  .homePage {
-    padding: 2rem 1rem;
+  .content {
+    gap: 2rem;
   }
 
   .infoCard,
   .formContainer {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .header p {
+    font-size: 0.85rem;
+  }
+
+  .content {
+    gap: 1rem;
+  }
+
+  .infoCard,
+  .formContainer {
+    padding: 0.75rem;
+  }
+
+  .contactInfo h2,
+  .formContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .headerDivider span {
+    width: 50px;
+  }
+
+  .infoItem {
+    gap: 0.5rem;
+  }
+
+  .infoItem .icon {
+    font-size: 1.2rem;
+  }
+
+  .infoItem h3 {
+    font-size: 0.95rem;
+  }
+
+  .infoItem a {
+    font-size: 0.85rem;
   }
 }

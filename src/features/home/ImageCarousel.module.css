@@ -105,6 +105,7 @@
 @media (max-width: 768px) {
   .carousel {
     padding: 1rem;
+    height: 50vh;
   }
 
   .carouselContainer {

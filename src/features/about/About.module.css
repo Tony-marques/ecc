@@ -222,3 +222,45 @@
     max-width: 280px;
   }
 }
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 2rem 1rem;
+  }
+
+  .team-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .team-intro {
+    font-size: 0.9rem;
+  }
+
+  .team-profile h3 {
+    font-size: 1.5rem;
+  }
+
+  .team-title {
+    font-size: 1rem;
+  }
+
+  .team-profile p {
+    font-size: 0.9rem;
+  }
+
+  .team-signature em {
+    font-size: 12px;
+  }
+
+  .team-signature span {
+    width: 40px;
+  }
+
+  .team-portrait img {
+    max-width: 200px;
+  }
+
+  .team-role {
+    font-size: 0.9rem;
+  }
+}
