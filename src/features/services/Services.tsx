@@ -9,6 +9,9 @@ export default function Services() {
       <div className={styles["services-container"]}>
         <header className={styles["services-header"]}>
           <h2>{t("services.title")}</h2>
+          <p className={styles["services-subtitle"]}>
+            {t("services.subtitle")}
+          </p>
           <div className={styles["header-divider"]}>
             <span></span>
             <span className={styles["divider-dot"]}></span>
@@ -82,28 +85,6 @@ export default function Services() {
             </ul>
           </div>
 
-          {/* Résidence secondaire */}
-          <div className={`${styles["service-card"]} ${styles.long}`}>
-            <h3>{t("services.secondaryResidence.title")}</h3>
-            <div className={styles["service-divider"]}>
-              <span></span>
-              <span className={styles["divider-dot"]}></span>
-              <span></span>
-            </div>
-            <ul>
-              <li>{t("services.secondaryResidence.point1")}</li>
-              <li>{t("services.secondaryResidence.point2")}</li>
-              <li>{t("services.secondaryResidence.point3")}</li>
-              <li>{t("services.secondaryResidence.point4")}</li>
-              <li>{t("services.secondaryResidence.point5")}</li>
-              <li>{t("services.secondaryResidence.point6")}</li>
-              <li>{t("services.secondaryResidence.point7")}</li>
-            </ul>
-            <p className={styles["service-note"]}>
-              {t("services.secondaryResidence.note")}
-            </p>
-          </div>
-
           {/* Tarifs */}
           <div
             className={`${styles["service-card"]} ${styles["pricing-card"]}`}
@@ -116,16 +97,52 @@ export default function Services() {
             </div>
             <p>{t("services.pricing.content")}</p>
           </div>
+        </div>
 
-          {/* Services sur mesure */}
-          <div className={`${styles["service-card"]} ${styles["custom-card"]}`}>
-            <h3>{t("services.custom.title")}</h3>
-            <div className={styles["service-divider"]}>
-              <span></span>
-              <span className={styles["divider-dot"]}></span>
-              <span></span>
+        <div className={styles["services-group"]}>
+          <div className={styles["complementary-signature"]}>
+            <span></span>
+            <em>{t("services.complementary.title")}</em>
+            <span></span>
+          </div>
+
+          <div
+            className={`${styles["services-content"]} ${styles["complementary-content"]}`}
+          >
+            {/* Résidence secondaire */}
+            <div className={`${styles["service-card"]} ${styles.long}`}>
+              <h3>{t("services.secondaryResidence.title")}</h3>
+              <div className={styles["service-divider"]}>
+                <span></span>
+                <span className={styles["divider-dot"]}></span>
+                <span></span>
+              </div>
+              <ul>
+                <li>{t("services.secondaryResidence.point1")}</li>
+                <li>{t("services.secondaryResidence.point2")}</li>
+                <li>{t("services.secondaryResidence.point3")}</li>
+                <li>{t("services.secondaryResidence.point4")}</li>
+                <li>{t("services.secondaryResidence.point5")}</li>
+                <li>{t("services.secondaryResidence.point6")}</li>
+                <li>{t("services.secondaryResidence.point7")}</li>
+              </ul>
+              <p className={styles["service-note"]}>
+                {t("services.secondaryResidence.note")}
+              </p>
             </div>
-            <p>{t("services.custom.content")}</p>
+
+            {/* Services sur mesure */}
+            <div
+              className={`${styles["service-card"]} ${styles["custom-card"]}`}
+            >
+              <h3>{t("services.custom.title")}</h3>
+              <div className={styles["service-divider"]}>
+                <span></span>
+                <span className={styles["divider-dot"]}></span>
+                <span></span>
+              </div>
+              <p>{t("services.custom.content")}</p>
+            </div>
           </div>
         </div>
       </div>

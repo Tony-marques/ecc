@@ -166,6 +166,10 @@
   },
   "services": {
     "title": "Nos services",
+    "subtitle": "Une gestion complète, pensée pour votre sérénité",
+    "complementary": {
+      "title": "Services complémentaires"
+    },
     "valorization": {
       "title": "Valorisation de votre bien",
       "point1": "Mise en valeur de votre logement pour attirer les voyageurs",
@@ -174,7 +178,7 @@
     },
     "welcome": {
       "title": "Accueil et suivi des voyageurs",
-      "point1": "Communication personnalisée avec vos locataires",
+      "point1": "Communication personnalisée avec les voyageurs",
       "point2": "Gestion sécurisée des arrivées et départs",
       "point3": "Supervision complète de l'expérience pour garantir d'excellentes évaluations"
     },

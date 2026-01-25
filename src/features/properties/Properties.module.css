@@ -61,7 +61,21 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px;
   gap: 2rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card {
@@ -73,6 +87,7 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  width: 100%;
 }
 
 .card:hover {

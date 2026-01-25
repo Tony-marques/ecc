@@ -1,81 +1,136 @@
+// import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./Properties.module.css";
 import maison1 from "../../assets/images/maison1.jfif";
 import maison2 from "../../assets/images/maison2.jfif";
 import maison3 from "../../assets/images/maison3.jfif";
 import maison4 from "../../assets/images/maison4.jfif";
-import { useTranslation } from "react-i18next";
+// import { client, urlFor } from "../../lib/sanity";
 
-interface Property {
-  id: number;
-  title: string;
-  location: string;
-  description: string;
-  titleKey?: string;
-  locationKey?: string;
-  descriptionKey?: string;
-  image: string;
-  airbnbUrl: string;
-  capacity: number;
-  bedrooms: number;
-}
+// interface PropertyData {
+//   _id: string;
+//   title: string;
+//   city: string;
+//   summary?: string;
+//   capacity: number;
+//   bedrooms: number;
+//   airbnbUrl?: string;
+//   images?: Array<{
+//     asset: {
+//       _ref: string;
+//     };
+//   }>;
+// }
 
-const properties: Property[] = [
-  {
-    id: 1,
-    title: "Titre du bien",
-    location: "Tours, France",
-    description: "Description du bien",
-    titleKey: "properties.items.1.title",
-    locationKey: "properties.items.1.location",
-    descriptionKey: "properties.items.1.description",
-    image: maison1,
-    airbnbUrl: "https://www.airbnb.fr",
-    capacity: 4,
-    bedrooms: 2,
-  },
-  {
-    id: 2,
-    title: "Titre du bien",
-    location: "Tours, France",
-    description: "Description du bien",
-    titleKey: "properties.items.2.title",
-    locationKey: "properties.items.2.location",
-    descriptionKey: "properties.items.2.description",
-    image: maison2,
-    airbnbUrl: "https://www.airbnb.fr",
-    capacity: 4,
-    bedrooms: 2,
-  },
-  {
-    id: 3,
-    title: "Titre du bien",
-    location: "Tours, France",
-    description: "Description du bien",
-    titleKey: "properties.items.3.title",
-    locationKey: "properties.items.3.location",
-    descriptionKey: "properties.items.3.description",
-    image: maison3,
-    airbnbUrl: "https://www.airbnb.fr",
-    capacity: 8,
-    bedrooms: 4,
-  },
-  {
-    id: 4,
-    title: "Titre du bien",
-    location: "Tours, France",
-    description: "Description du bien",
-    titleKey: "properties.items.4.title",
-    locationKey: "properties.items.4.location",
-    descriptionKey: "properties.items.4.description",
-    image: maison4,
-    airbnbUrl: "https://www.airbnb.fr",
-    capacity: 2,
-    bedrooms: 1,
-  },
-];
+// interface PropertyCard {
+//   id: string;
+//   title: string;
+//   location: string;
+//   description: string;
+//   imageUrl: string | null;
+//   airbnbUrl: string | null;
+//   capacity: number;
+//   bedrooms: number;
+// }
 
 export default function Properties() {
   const { t } = useTranslation();
+  // const [items, setItems] = useState<PropertyCard[]>([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState<string | null>(null);
+
+  // useEffect(() => {
+  //   const controller = new AbortController();
+
+  //   async function fetchProperties() {
+  //     try {
+  //       setLoading(true);
+  //       const query = `*[_type == "property" && status == "published"] | order(_createdAt desc) {
+  //         _id,
+  //         title,
+  //         city,
+  //         summary,
+  //         capacity,
+  //         bedrooms,
+  //         airbnbUrl,
+  //         images
+  //       }`;
+
+  //       const data = await client.fetch(
+  //         query,
+  //         {},
+  //         { signal: controller.signal },
+  //       );
+
+  //       const cards = (data as PropertyData[]).map((item) => ({
+  //         id: item._id,
+  //         title:
+  //           item.title ||
+  //           t("properties.fallbackTitle", { defaultValue: "Bien" }),
+  //         location: item.city || "",
+  //         description: item.summary || "",
+  //         imageUrl: item.images?.[0] ? urlFor(item.images[0]).url() : null,
+  //         airbnbUrl: item.airbnbUrl || null,
+  //         capacity: item.capacity || 0,
+  //         bedrooms: item.bedrooms || 0,
+  //       }));
+
+  //       setItems(cards);
+  //       setError(null);
+  //     } catch (err) {
+  //       if ((err as any).name === "AbortError") return;
+  //       setError((err as Error).message);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }
+
+  //   fetchProperties();
+  //   return () => controller.abort();
+  // }, [t]);
+
+  // const hasData = useMemo(() => items.length > 0, [items]);
+
+  // Données statiques temporaires
+  const items = [
+    {
+      id: "1",
+      title: t("properties.items.1.title"),
+      location: t("properties.items.1.location"),
+      description: t("properties.items.1.description"),
+      imageUrl: maison1,
+      capacity: 4,
+      bedrooms: 2,
+    },
+    {
+      id: "2",
+      title: t("properties.items.2.title"),
+      location: t("properties.items.2.location"),
+      description: t("properties.items.2.description"),
+      imageUrl: maison2,
+      capacity: 6,
+      bedrooms: 3,
+    },
+    {
+      id: "3",
+      title: t("properties.items.3.title"),
+      location: t("properties.items.3.location"),
+      description: t("properties.items.3.description"),
+      imageUrl: maison3,
+      capacity: 2,
+      bedrooms: 1,
+    },
+    {
+      id: "4",
+      title: t("properties.items.4.title"),
+      location: t("properties.items.4.location"),
+      description: t("properties.items.4.description"),
+      imageUrl: maison4,
+      capacity: 8,
+      bedrooms: 4,
+    },
+  ];
+
   return (
     <section className={styles.properties} id="consultez-nos-biens">
       <div className={styles.container}>
@@ -89,42 +144,36 @@ export default function Properties() {
           </div>
         </div>
 
+        {/* {loading && (
+          <p className={styles.intro}>{t("loading") || "Chargement..."}</p>
+        )}
+        {error && <p className={styles.intro}>Erreur: {error}</p>}
+        {!loading && !error && !hasData && (
+          <p className={styles.intro}>
+            {t("properties.empty", {
+              defaultValue: "Aucun bien publié pour le moment.",
+            })}
+          </p>
+        )} */}
+
         <div className={styles.grid}>
-          {properties.map((property) => (
-            <a
-              key={property.id}
-              href={property.airbnbUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.card}
-            >
+          {items.map((property) => (
+            <div key={property.id} className={styles.card}>
               <div className={styles.imageContainer}>
-                <img
-                  src={property.image}
-                  alt={
-                    property.titleKey ? t(property.titleKey) : property.title
-                  }
-                  loading="lazy"
-                />
-                <div className={styles.overlay}>
-                  <span>{t("properties.viewOnAirbnb")}</span>
-                </div>
+                {property.imageUrl ? (
+                  <img
+                    src={property.imageUrl}
+                    alt={property.title}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className={styles.placeholder}></div>
+                )}
               </div>
               <div className={styles.content}>
-                <h3>
-                  {property.titleKey ? t(property.titleKey) : property.title}
-                </h3>
-                <p className={styles.location}>
-                  📍{" "}
-                  {property.locationKey
-                    ? t(property.locationKey)
-                    : property.location}
-                </p>
-                <p className={styles.description}>
-                  {property.descriptionKey
-                    ? t(property.descriptionKey)
-                    : property.description}
-                </p>
+                <h3>{property.title}</h3>
+                <p className={styles.location}>📍 {property.location}</p>
+                <p className={styles.description}>{property.description}</p>
                 <div className={styles.details}>
                   <span>
                     👥 {property.capacity} {t("properties.capacityLabel")}
@@ -136,7 +185,7 @@ export default function Properties() {
                   </span>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
