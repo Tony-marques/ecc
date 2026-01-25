@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FiMenu, FiX } from "react-icons/fi";
 import NavItem from "./NavItem";
 import LanguageSwitcher from "./LanguageSwitcher";
 import styles from "./Navbar.module.css";
@@ -15,6 +16,7 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const NAVBAR_CONFIGS: NavItemConfig[] = [
     {
@@ -65,9 +67,18 @@ export default function Navbar() {
       className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}
     >
       <img src={logo} alt="logo" id="logo" />
-      <ul>
+      <button
+        className={styles["menu-toggle"]}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Menu"
+      >
+        {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+      </button>
+      <ul className={`${styles.menu} ${isMenuOpen ? styles.open : ""}`}>
         {NAVBAR_CONFIGS.map((item) => (
-          <NavItem key={item.path} {...item} />
+          <li key={item.path} onClick={() => setIsMenuOpen(false)}>
+            <NavItem {...item} />
+          </li>
         ))}
       </ul>
       <LanguageSwitcher />
