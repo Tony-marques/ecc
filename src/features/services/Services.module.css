@@ -59,11 +59,32 @@
 }
 
 .services-content {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: stretch;
-  justify-content: center;
+  align-items: start;
+}
+
+.services-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+.services-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+.services-left-column .service-card {
+  flex: 1;
+}
+
+.services-right-column .service-card {
+  flex: 1;
 }
 
 .services-group {
@@ -99,7 +120,11 @@
 }
 
 .complementary-content {
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: stretch;
+  width: 100%;
 }
 
 .service-card {
@@ -108,31 +133,21 @@
   padding: 2rem;
   box-shadow: 0 2px 12px rgba(112, 81, 65, 0.08);
   transition: all 0.3s ease;
-  flex: 1 1 320px;
-  max-width: 380px;
   display: flex;
   flex-direction: column;
   align-self: stretch;
 }
 
 .service-card.long {
-  flex: 1 1 48%;
-  max-width: 48%;
-  min-width: 320px;
+  flex: 1 1 auto;
 }
 
 .pricing-card {
-  order: 5;
-  flex: 1 1 48%;
-  max-width: 48%;
-  min-width: 320px;
+  order: unset;
 }
 
 .custom-card {
-  order: 6;
-  flex: 1 1 48%;
-  max-width: 48%;
-  min-width: 320px;
+  order: unset;
 }
 
 .service-card h3 {
@@ -205,6 +220,7 @@
   font-size: 15px;
   line-height: 1.8;
   margin: 1rem 0;
+  white-space: pre-wrap;
 }
 
 .service-note {
@@ -241,6 +257,19 @@
 
   .services-content {
     grid-template-columns: 1fr;
+  }
+
+  .services-left-column {
+    gap: 1.5rem;
+  }
+
+  .services-right-column {
+    gap: 1.5rem;
+  }
+
+  .complementary-content {
+    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   .service-card {
