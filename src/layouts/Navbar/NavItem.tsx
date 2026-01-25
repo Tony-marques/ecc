@@ -6,9 +6,15 @@ interface NavItemProps {
   label: string;
   path: string;
   className?: string;
+  onToggle?: () => void;
 }
 
-export default function NavItem({ label, path, className }: NavItemProps) {
+export default function NavItem({
+  label,
+  path,
+  className,
+  onToggle,
+}: NavItemProps) {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const targetId = path.startsWith("/") ? path.slice(1) : path;
@@ -18,7 +24,7 @@ export default function NavItem({ label, path, className }: NavItemProps) {
   const renderLink = () => {
     if (path === "/") {
       return (
-        <RouterLink className={linkClass} to="/">
+        <RouterLink className={linkClass} to="/" onClick={onToggle}>
           {label}
         </RouterLink>
       );
@@ -27,6 +33,7 @@ export default function NavItem({ label, path, className }: NavItemProps) {
     if (isHome) {
       return (
         <ScrollLink
+          onClick={onToggle}
           className={linkClass}
           to={targetId}
           smooth={true}
@@ -40,7 +47,7 @@ export default function NavItem({ label, path, className }: NavItemProps) {
     }
 
     return (
-      <RouterLink className={linkClass} to={`/#${targetId}`}>
+      <RouterLink className={linkClass} to={`/#${targetId}`} onClick={onToggle}>
         {label}
       </RouterLink>
     );

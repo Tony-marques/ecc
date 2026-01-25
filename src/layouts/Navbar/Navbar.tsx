@@ -62,6 +62,10 @@ export default function Navbar() {
     };
   }, [lastScrollY]);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav
       className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}
@@ -76,8 +80,8 @@ export default function Navbar() {
       </button>
       <ul className={`${styles.menu} ${isMenuOpen ? styles.open : ""}`}>
         {NAVBAR_CONFIGS.map((item) => (
-          <li key={item.path} onClick={() => setIsMenuOpen(false)}>
-            <NavItem {...item} />
+          <li key={item.path}>
+            <NavItem {...item} onToggle={toggleMenu} />
           </li>
         ))}
       </ul>
