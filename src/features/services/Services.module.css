@@ -128,14 +128,22 @@
 }
 
 .service-card {
-  background: white;
+  background: #f8f5f2;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 2px 12px rgba(112, 81, 65, 0.08);
+  /* box-shadow: 0 2px 12px rgba(112, 81, 65, 0.08); */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  /* cursor: pointer; */
+}
+
+.service-card:hover {
+  background: #fffaf7;
+  box-shadow: 0 8px 24px rgba(112, 81, 65, 0.15);
+  transform: translateY(-4px);
 }
 
 .service-card.long {
