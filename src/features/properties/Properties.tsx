@@ -101,6 +101,7 @@ export default function Properties() {
       imageUrl: maison1,
       capacity: 4,
       bedrooms: 2,
+      airbnbUrl: "https://www.airbnb.com/",
     },
     {
       id: "2",
@@ -110,6 +111,7 @@ export default function Properties() {
       imageUrl: maison2,
       capacity: 6,
       bedrooms: 3,
+      airbnbUrl: "https://www.airbnb.com/",
     },
     {
       id: "3",
@@ -119,6 +121,7 @@ export default function Properties() {
       imageUrl: maison3,
       capacity: 2,
       bedrooms: 1,
+      airbnbUrl: "https://www.airbnb.com/",
     },
     {
       id: "4",
@@ -128,6 +131,7 @@ export default function Properties() {
       imageUrl: maison4,
       capacity: 8,
       bedrooms: 4,
+      airbnbUrl: "https://www.airbnb.com/",
     },
   ];
 
@@ -158,7 +162,13 @@ export default function Properties() {
 
         <div className={styles.grid}>
           {items.map((property) => (
-            <div key={property.id} className={styles.card}>
+            <a
+              key={property.id}
+              href={property.airbnbUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.card}
+            >
               <div className={styles.imageContainer}>
                 {property.imageUrl ? (
                   <img
@@ -169,6 +179,9 @@ export default function Properties() {
                 ) : (
                   <div className={styles.placeholder}></div>
                 )}
+                <div className={styles.overlay}>
+                  <span>Voir sur Airbnb</span>
+                </div>
               </div>
               <div className={styles.content}>
                 <h3>{property.title}</h3>
@@ -185,7 +198,7 @@ export default function Properties() {
                   </span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
