@@ -45,6 +45,7 @@ export default function LanguageSwitcher() {
         className={`${styles.langButton} ${i18n.language === "fr" ? styles.active : ""}`}
         onClick={() => handleLanguageChange("fr")}
         title="Français"
+        aria-label="Passer en français"
       >
         FR
       </button>
@@ -53,6 +54,7 @@ export default function LanguageSwitcher() {
         className={`${styles.langButton} ${i18n.language === "en" ? styles.active : ""}`}
         onClick={() => handleLanguageChange("en")}
         title="English"
+        aria-label="Switch to English"
       >
         EN
       </button>

@@ -4,7 +4,7 @@
   <!-- Home -->
   <url>
     <loc>https://www.ecdconciergerie.fr/</loc>
-    <lastmod>2024-01-24</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/" />
@@ -15,7 +15,7 @@
   <!-- Legal Notice (Mentions légales / Legal Notice) -->
   <url>
     <loc>https://www.ecdconciergerie.fr/mentions-legales</loc>
-    <lastmod>2024-01-24</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/mentions-legales" />
@@ -25,7 +25,7 @@
 
   <url>
     <loc>https://www.ecdconciergerie.fr/legal-notice</loc>
-    <lastmod>2024-01-24</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/mentions-legales" />
@@ -36,7 +36,7 @@
   <!-- Privacy Policy (Politique de confidentialité / Privacy Policy) -->
   <url>
     <loc>https://www.ecdconciergerie.fr/politique-de-confidentialite</loc>
-    <lastmod>2024-01-24</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/politique-de-confidentialite" />
@@ -46,7 +46,7 @@
 
   <url>
     <loc>https://www.ecdconciergerie.fr/privacy-policy</loc>
-    <lastmod>2024-01-24</lastmod>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/politique-de-confidentialite" />

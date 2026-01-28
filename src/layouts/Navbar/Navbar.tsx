@@ -80,9 +80,7 @@ export default function Navbar() {
       </button>
       <ul className={`${styles.menu} ${isMenuOpen ? styles.open : ""}`}>
         {NAVBAR_CONFIGS.map((item) => (
-          <li key={item.path}>
-            <NavItem {...item} onToggle={toggleMenu} />
-          </li>
+          <NavItem key={item.path} {...item} onToggle={toggleMenu} />
         ))}
       </ul>
       <LanguageSwitcher />

@@ -36,10 +36,8 @@ export const generateLocalBusinessSchema = () => {
     ],
     "priceRange": "$$",
     "sameAs": [
-      "https://www.airbnb.fr",
-      // Add social media links if you have them
-      // "https://www.facebook.com/...",
-      // "https://www.instagram.com/...",
+      "https://www.facebook.com/profile.php?id=61584790737384",
+      "https://www.instagram.com/ecdc_conciergerie/",
     ],
     "foundingDate": "2024",
     "founder": [
@@ -73,8 +71,8 @@ export const generateOrganizationSchema = () => {
     "description":
       "Conciergerie spécialisée dans la location courte durée et la gestion de propriétés",
     "sameAs": [
-      // "https://www.facebook.com/...",
-      // "https://www.instagram.com/...",
+      "https://www.facebook.com/profile.php?id=61584790737384",
+      "https://www.instagram.com/ecdc_conciergerie/",
     ],
     "contactPoint": {
       "@type": "ContactPoint",

@@ -1,10 +1,10 @@
 // import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Properties.module.css";
-import maison1 from "../../assets/images/maison1.jfif";
-import maison2 from "../../assets/images/maison2.jfif";
-import maison3 from "../../assets/images/maison3.jfif";
-import maison4 from "../../assets/images/maison4.jfif";
+// import maison1 from "../../assets/images/maison1.jfif";
+// import maison2 from "../../assets/images/maison2.jfif";
+// import maison3 from "../../assets/images/maison3.jfif";
+// import maison4 from "../../assets/images/maison4.jfif";
 // import { client, urlFor } from "../../lib/sanity";
 
 // interface PropertyData {
@@ -92,48 +92,48 @@ export default function Properties() {
   // const hasData = useMemo(() => items.length > 0, [items]);
 
   // Données statiques temporaires
-  const items = [
-    {
-      id: "1",
-      title: t("properties.items.1.title"),
-      location: t("properties.items.1.location"),
-      description: t("properties.items.1.description"),
-      imageUrl: maison1,
-      capacity: 4,
-      bedrooms: 2,
-      airbnbUrl: "https://www.airbnb.com/",
-    },
-    {
-      id: "2",
-      title: t("properties.items.2.title"),
-      location: t("properties.items.2.location"),
-      description: t("properties.items.2.description"),
-      imageUrl: maison2,
-      capacity: 6,
-      bedrooms: 3,
-      airbnbUrl: "https://www.airbnb.com/",
-    },
-    {
-      id: "3",
-      title: t("properties.items.3.title"),
-      location: t("properties.items.3.location"),
-      description: t("properties.items.3.description"),
-      imageUrl: maison3,
-      capacity: 2,
-      bedrooms: 1,
-      airbnbUrl: "https://www.airbnb.com/",
-    },
-    {
-      id: "4",
-      title: t("properties.items.4.title"),
-      location: t("properties.items.4.location"),
-      description: t("properties.items.4.description"),
-      imageUrl: maison4,
-      capacity: 8,
-      bedrooms: 4,
-      airbnbUrl: "https://www.airbnb.com/",
-    },
-  ];
+  // const items = [
+  //   {
+  //     id: "1",
+  //     title: t("properties.items.1.title"),
+  //     location: t("properties.items.1.location"),
+  //     description: t("properties.items.1.description"),
+  //     imageUrl: maison1,
+  //     capacity: 4,
+  //     bedrooms: 2,
+  //     airbnbUrl: "https://www.airbnb.com/",
+  //   },
+  //   {
+  //     id: "2",
+  //     title: t("properties.items.2.title"),
+  //     location: t("properties.items.2.location"),
+  //     description: t("properties.items.2.description"),
+  //     imageUrl: maison2,
+  //     capacity: 6,
+  //     bedrooms: 3,
+  //     airbnbUrl: "https://www.airbnb.com/",
+  //   },
+  //   {
+  //     id: "3",
+  //     title: t("properties.items.3.title"),
+  //     location: t("properties.items.3.location"),
+  //     description: t("properties.items.3.description"),
+  //     imageUrl: maison3,
+  //     capacity: 2,
+  //     bedrooms: 1,
+  //     airbnbUrl: "https://www.airbnb.com/",
+  //   },
+  //   {
+  //     id: "4",
+  //     title: t("properties.items.4.title"),
+  //     location: t("properties.items.4.location"),
+  //     description: t("properties.items.4.description"),
+  //     imageUrl: maison4,
+  //     capacity: 8,
+  //     bedrooms: 4,
+  //     airbnbUrl: "https://www.airbnb.com/",
+  //   },
+  // ];
 
   return (
     <section className={styles.properties} id="consultez-nos-biens">
@@ -161,7 +161,7 @@ export default function Properties() {
         )} */}
 
         <div className={styles.grid}>
-          {items.map((property) => (
+          {/* {items.map((property) => (
             <a
               key={property.id}
               href={property.airbnbUrl}
@@ -199,8 +199,9 @@ export default function Properties() {
                 </div>
               </div>
             </a>
-          ))}
+          ))} */}
         </div>
+        <p className={styles.empty}>Aucun bien disponible pour le moment.</p>
       </div>
     </section>
   );
