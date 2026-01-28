@@ -1,6 +1,3 @@
-import { Link } from "react-scroll";
-import styles from "./SocialItem.module.css";
-
 interface SocialItemProps {
   label: string;
   Icon: React.ReactElement;
@@ -8,20 +5,31 @@ interface SocialItemProps {
 }
 
 export default function SocialItem({ label, Icon, href }: SocialItemProps) {
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById(href);
+    if (element) {
+      const offset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <li className={styles.socialItem}>
+    <>
       {label === "contact" && (
-        <Link
-          to={href}
-          smooth={true}
-          duration={500}
-          spy={true}
-          offset={-100}
-          role="button"
-          tabIndex={0}
+        <a
+          href={`#${href}`}
+          onClick={handleContactClick}
+          aria-label="Contact par email"
         >
           {Icon}
-        </Link>
+        </a>
       )}
       {label !== "contact" && (
         <a
@@ -33,6 +41,6 @@ export default function SocialItem({ label, Icon, href }: SocialItemProps) {
           {Icon}
         </a>
       )}
-    </li>
+    </>
   );
 }

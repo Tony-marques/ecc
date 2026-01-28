@@ -1,5 +1,4 @@
 import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
 import styles from "./NavItem.module.css";
 
 interface NavItemProps {
@@ -21,6 +20,26 @@ export default function NavItem({
   const linkClass =
     className === "biens" ? `${styles.link} ${styles.biensLink}` : styles.link;
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHome && path !== "/") {
+      e.preventDefault();
+      const element = document.getElementById(targetId);
+      if (element) {
+        const offset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+      onToggle?.();
+    } else if (onToggle) {
+      onToggle();
+    }
+  };
+
   const renderLink = () => {
     if (path === "/") {
       return (
@@ -30,26 +49,12 @@ export default function NavItem({
       );
     }
 
-    if (isHome) {
-      return (
-        <ScrollLink
-          onClick={onToggle}
-          className={linkClass}
-          to={targetId}
-          smooth={true}
-          duration={500}
-          spy={true}
-          offset={-100}
-        >
-          {label}
-        </ScrollLink>
-      );
-    }
+    const href = isHome ? `#${targetId}` : `/#${targetId}`;
 
     return (
-      <RouterLink className={linkClass} to={`/#${targetId}`} onClick={onToggle}>
+      <a className={linkClass} href={href} onClick={handleClick}>
         {label}
-      </RouterLink>
+      </a>
     );
   };
 

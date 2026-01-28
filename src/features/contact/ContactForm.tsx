@@ -63,7 +63,8 @@ export default function ContactForm() {
       };
 
       emailjs
-        .send("service_k04k20b", "template_4t2qtoe", data, "q5uC-6vUJ31sLcH-G")
+        .send("service_0j4m2xc", "template_4h6obre", data, "UuzdCGzx1FbAnrKL_")
+        // .send("service_k04k20b", "template_4t2qtoe", data, "q5uC-6vUJ31sLcH-G")
         .then(() => {
           setSubmitStatus("success");
 
