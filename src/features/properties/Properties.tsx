@@ -1,134 +1,109 @@
-// import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Properties.module.css";
-// import maison1 from "../../assets/images/maison1.jfif";
-// import maison2 from "../../assets/images/maison2.jfif";
-// import maison3 from "../../assets/images/maison3.jfif";
-// import maison4 from "../../assets/images/maison4.jfif";
-import maison5 from "../../assets/images/maison5.avif";
-// import { client, urlFor } from "../../lib/sanity";
+import { client, urlFor } from "../../lib/sanity";
 
-// interface PropertyData {
-//   _id: string;
-//   title: string;
-//   city: string;
-//   summary?: string;
-//   capacity: number;
-//   bedrooms: number;
-//   airbnbUrl?: string;
-//   images?: Array<{
-//     asset: {
-//       _ref: string;
-//     };
-//   }>;
-// }
+interface PropertyData {
+  _id: string;
+  title: string;
+  titleEn?: string;
+  city: string;
+  summary?: string;
+  summaryEn?: string;
+  capacity: number;
+  bedrooms: number;
+  airbnbUrl?: string;
+  createdAt?: string;
+  isNew?: boolean;
+  image?: {
+    asset: {
+      _ref: string;
+    };
+  };
+}
 
-// interface PropertyCard {
-//   id: string;
-//   title: string;
-//   location: string;
-//   description: string;
-//   imageUrl: string | null;
-//   airbnbUrl: string | null;
-//   capacity: number;
-//   bedrooms: number;
-// }
+interface PropertyCard {
+  id: string;
+  title: string;
+  location: string;
+  description: string;
+  imageUrl: string | null;
+  airbnbUrl: string | null;
+  capacity: number;
+  bedrooms: number;
+  createdAt?: string;
+  isNew?: boolean;
+}
 
 export default function Properties() {
-  const { t } = useTranslation();
-  // const [items, setItems] = useState<PropertyCard[]>([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState<string | null>(null);
+  const { t, i18n } = useTranslation();
+  const [items, setItems] = useState<PropertyCard[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // useEffect(() => {
-  //   const controller = new AbortController();
+  useEffect(() => {
+    const controller = new AbortController();
 
-  //   async function fetchProperties() {
-  //     try {
-  //       setLoading(true);
-  //       const query = `*[_type == "property" && status == "published"] | order(_createdAt desc) {
-  //         _id,
-  //         title,
-  //         city,
-  //         summary,
-  //         capacity,
-  //         bedrooms,
-  //         airbnbUrl,
-  //         images
-  //       }`;
+    async function fetchProperties() {
+      try {
+        setLoading(true);
+        const query = `*[_type == "property" && status == "published"] | order(_createdAt desc) {
+          _id,
+          title,
+          titleEn,
+          city,
+          summary,
+          summaryEn,
+          capacity,
+          bedrooms,
+          airbnbUrl,
+          createdAt,
+          isNew,
+          image
+        }`;
 
-  //       const data = await client.fetch(
-  //         query,
-  //         {},
-  //         { signal: controller.signal },
-  //       );
+        const data = await client.fetch(
+          query,
+          {},
+          { signal: controller.signal },
+        );
 
-  //       const cards = (data as PropertyData[]).map((item) => ({
-  //         id: item._id,
-  //         title:
-  //           item.title ||
-  //           t("properties.fallbackTitle", { defaultValue: "Bien" }),
-  //         location: item.city || "",
-  //         description: item.summary || "",
-  //         imageUrl: item.images?.[0] ? urlFor(item.images[0]).url() : null,
-  //         airbnbUrl: item.airbnbUrl || null,
-  //         capacity: item.capacity || 0,
-  //         bedrooms: item.bedrooms || 0,
-  //       }));
+        const cards = (data as PropertyData[]).map((item) => {
+          const isEnglish = i18n.language === "en";
+          return {
+            id: item._id,
+            // Utilise titleEn si en anglais ET si existe, sinon fallback sur title (FR)
+            title:
+              (isEnglish ? item.titleEn || item.title : item.title) ||
+              t("properties.fallbackTitle", { defaultValue: "Bien" }),
+            location: item.city || "",
+            // Utilise summaryEn si en anglais ET si existe, sinon fallback sur summary (FR)
+            description:
+              (isEnglish ? item.summaryEn || item.summary : item.summary) || "",
+            imageUrl: item.image ? urlFor(item.image).url() : null,
+            airbnbUrl: item.airbnbUrl || null,
+            capacity: item.capacity || 0,
+            bedrooms: item.bedrooms || 0,
+            createdAt: item.createdAt,
+            isNew: item.isNew || false,
+          };
+        });
 
-  //       setItems(cards);
-  //       setError(null);
-  //     } catch (err) {
-  //       if ((err as any).name === "AbortError") return;
-  //       setError((err as Error).message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   }
+        setItems(cards);
+        setError(null);
+      } catch (err) {
+        if ((err as any).name === "AbortError") return;
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-  //   fetchProperties();
-  //   return () => controller.abort();
-  // }, [t]);
+    fetchProperties();
+    return () => controller.abort();
+  }, [t]);
 
-  // const hasData = useMemo(() => items.length > 0, [items]);
-
-  // Données statiques temporaires
-  const items: {
-    id: string;
-    title?: string;
-    location?: string;
-    description?: string;
-    imageUrl: string | null;
-    capacity?: number;
-    bedrooms?: number;
-    airbnbUrl?: string;
-    createdAt?: string;
-  }[] = [
-    {
-      id: "5",
-      title: t("properties.items.5.title"),
-      location: t("properties.items.5.location"),
-      description: t("properties.items.5.description"),
-      imageUrl: maison5,
-      capacity: 6,
-      bedrooms: 3,
-      airbnbUrl:
-        "https://www.airbnb.fr/rooms/1409298071938778081?_set_bev_on_new_domain=1769447452_EANjMwZDNkOGZhNG&set_everest_cookie_on_new_domain=1769014895.EAZjkwZjM0NTU2YTMzNm.nl5GBDhwi7Fh9vMsDmMA-ffN5kKc5m34NMeetTulrmQ&source_impression_id=p3_1769664739_P3-SfuzKFoxeJgjZ",
-      createdAt: "27/01/2026", // format DD/MM/YYYY
-    },
-  ];
-
-  // Fonction pour vérifier si un bien est nouveau (moins de 1 mois)
-  const isNew = (createdAt?: string) => {
-    if (!createdAt) return false;
-
-    // Parser la date au format DD/MM/YYYY
-    const [day, month, year] = createdAt.split("/").map(Number);
-    const propertyDate = new Date(year, month - 1, day);
-
-    const monthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-    return propertyDate > monthAgo;
-  };
+  const hasData = useMemo(() => items.length > 0, [items]);
 
   return (
     <section className={styles.properties} id="consultez-nos-biens">
@@ -143,7 +118,7 @@ export default function Properties() {
           </div>
         </div>
 
-        {/* {loading && (
+        {loading && (
           <p className={styles.intro}>{t("loading") || "Chargement..."}</p>
         )}
         {error && <p className={styles.intro}>Erreur: {error}</p>}
@@ -153,19 +128,19 @@ export default function Properties() {
               defaultValue: "Aucun bien publié pour le moment.",
             })}
           </p>
-        )} */}
+        )}
 
         <div className={styles.grid}>
           {items.map((property) => (
             <a
               key={property.id}
-              href={property.airbnbUrl}
+              href={property.airbnbUrl || undefined}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.card}
             >
               <div className={styles.imageContainer}>
-                {isNew(property.createdAt) && (
+                {property.isNew && (
                   <div className={styles.newBadge}>
                     {t("properties.newBadge")}
                   </div>
@@ -209,7 +184,6 @@ export default function Properties() {
             </a>
           ))}
         </div>
-        {/* <p className={styles.empty}>Aucun bien disponible pour le moment.</p> */}
       </div>
     </section>
   );
