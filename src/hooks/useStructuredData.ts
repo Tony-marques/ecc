@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { generateLocalBusinessSchema, generateOrganizationSchema } from "../utils/schemaOrg";
+import { generateLocalBusinessSchema } from "../utils/localBusinessSchema";
+import { generateOrganizationSchema } from "../utils/schemaOrg";
 
 /**
  * Hook to inject JSON-LD structured data (schema.org) into document head

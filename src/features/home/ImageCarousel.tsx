@@ -61,9 +61,14 @@ export default function ImageCarousel() {
         <img
           key={currentIndex}
           src={images[currentIndex]}
-          alt={`Maison ${currentIndex + 1}`}
+          alt={`Logement en location courte durée à Tours ${currentIndex + 1}`}
           className={`${styles.image} ${styles.fadeIn}`}
-          loading="lazy"
+          loading={currentIndex === 0 ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={currentIndex === 0 ? "high" : "auto"}
+          width={1100}
+          height={619}
+          sizes="(max-width: 768px) 100vw, 1100px"
         />
 
         <button

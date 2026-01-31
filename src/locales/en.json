@@ -27,6 +27,10 @@
     "privacyPolicy": {
       "title": "Effet Coup de Cœur Concierge Service Tours - Privacy Policy GDPR",
       "description": "Privacy policy and personal data protection compliant with GDPR for concierge.fr"
+    },
+    "notFound": {
+      "title": "Effet Coup de Cœur Concierge Service Tours - Page Not Found 404",
+      "description": "The page you are looking for does not exist. Return to home or contact our concierge service in Tours."
     }
   },
   "nav": {
@@ -35,6 +39,13 @@
     "contact": "Contact Us",
     "services": "Our Services",
     "properties": "View Our Properties"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved. Return to the home page or contact us to find what you're looking for.",
+    "homeButton": "Back to Home",
+    "contactButton": "Contact Us",
+    "quickLinks": "Quick Links"
   },
   "home": {
     "title": "Welcome",
@@ -52,7 +63,7 @@
     "remi": "Rémi",
     "remiTitle": "Co-founder – Real estate & showcasing",
     "remiDesc": "A real estate lover, Rémi pays special attention to showcasing properties, the quality of spaces, and the care given to every home. His vision: reveal each place's potential with rigor and coherence.",
-    "portraitAlt": "Rémi and Laura – Effet Coup de Cœur founders",
+    "portraitAlt": "Rémi and Laura – Effet Coup de Cœur founders at Tours concierge service",
     "teamDescription1": "By combining our two passions, creating a concierge service became obvious: a service where the well-being of travelers and the management of your property meet.",
     "teamDescription2": "We put our expertise and passion at the service of your project, with special attention to every detail to create the Effet Coup de Cœur experience.",
     "foundersConciergies": "Founders & Concierges",
@@ -97,8 +108,7 @@
   "properties": {
     "title": "View Our Properties",
     "description": "Discover our selection of quality properties",
-    "viewOnAirbnb": "View on Airbnb",
-    "capacityLabel": "guest",
+    "viewOnAirbnb": "View on Airbnb",    "newBadge": "New",    "capacityLabel": "guest",
     "bedroomsLabel": "bedroom",
     "items": {
       "1": {
@@ -120,6 +130,11 @@
         "title": "Property title",
         "location": "Tours, France",
         "description": "Property description"
+      },
+      "5": {
+        "title": "Apartment - Tours, France",
+        "location": "Tours, France",
+        "description": "3-bedroom apartment, 5 minutes from Tours train station and TGV Saint-Pierre-des-Corps."
       }
     }
   },

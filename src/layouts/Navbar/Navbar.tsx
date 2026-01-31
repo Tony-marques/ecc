@@ -70,7 +70,13 @@ export default function Navbar() {
     <nav
       className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}
     >
-      <img src={logo} alt="logo" id="logo" />
+      <img
+        src={logo}
+        alt="Logo Effet Coup de Cœur - Conciergerie Tours (37)"
+        id="logo"
+        decoding="async"
+        fetchPriority="high"
+      />
       <button
         className={styles["menu-toggle"]}
         onClick={() => setIsMenuOpen(!isMenuOpen)}

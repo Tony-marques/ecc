@@ -9,6 +9,8 @@ export interface PageMeta {
   path?: string;
   pathFr?: string;
   pathEn?: string;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
 export const PAGE_METAS: Record<string, PageMeta> = {
@@ -16,27 +18,37 @@ export const PAGE_METAS: Record<string, PageMeta> = {
     titleKey: "seo.home.title",
     descriptionKey: "seo.home.description",
     path: "/",
+    image: "/og-image.jpg",
+    type: "website",
   },
   about: {
     titleKey: "seo.about.title",
     descriptionKey: "seo.about.description",
     path: "/",
+    image: "/og-image.jpg",
+    type: "website",
   },
   contact: {
     titleKey: "seo.contact.title",
     descriptionKey: "seo.contact.description",
     path: "/",
+    image: "/og-image.jpg",
+    type: "website",
   },
   services: {
     titleKey: "seo.services.title",
     descriptionKey: "seo.services.description",
     path: "/nos-services",
     pathEn: "/our-services",
+    image: "/og-image.jpg",
+    type: "website",
   },
   properties: {
     titleKey: "seo.properties.title",
     descriptionKey: "seo.properties.description",
     path: "/",
+    image: "/og-image.jpg",
+    type: "website",
   },
   legalNotice: {
     titleKey: "seo.legalNotice.title",

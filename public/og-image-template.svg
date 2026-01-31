@@ -1,0 +1,70 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Background with site colors -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f6efe9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ede3d9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle pattern -->
+    <pattern id="pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#705141" opacity="0.03"/>
+    </pattern>
+    
+    <!-- Image mask for rounded corners -->
+    <clipPath id="imageClip">
+      <rect x="50" y="165" width="400" height="300" rx="20"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#pattern)"/>
+  
+  <!-- Left side: Team photo area (espace réservé pour equipe-3.png) -->
+  <!-- Photo à placer: x=50, y=165, width=400, height=300, coins arrondis 20px -->
+  
+  <!-- Right side: Content -->
+  <!-- Main title -->
+  <text x="520" y="210" font-family="Playfair Display, serif" font-size="58" font-weight="400" fill="#705141">
+    Effet Coup de Cœur
+  </text>
+  
+  <text x="520" y="275" font-family="Playfair Display, serif" font-size="48" font-weight="400" fill="#705141">
+    Conciergerie à Tours
+  </text>
+  
+  <!-- Decorative divider -->
+  <g transform="translate(520, 310)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#705141" stroke-width="1" opacity="0.5"/>
+    <circle cx="110" cy="0" r="3" fill="#705141" opacity="0.5"/>
+    <line x1="120" y1="0" x2="220" y2="0" stroke="#705141" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Services -->
+  <text x="520" y="365" font-family="Nunito, sans-serif" font-size="22" font-weight="400" fill="#705141">
+    Location Courte Durée
+  </text>
+  <text x="520" y="395" font-family="Nunito, sans-serif" font-size="22" font-weight="400" fill="#705141">
+    Gestion Airbnb Professionnelle
+  </text>
+  <text x="520" y="425" font-family="Nunito, sans-serif" font-size="22" font-weight="400" fill="#705141">
+    Valorisation Immobilière
+  </text>
+  
+  <!-- Location badge -->
+  <g transform="translate(520, 460)">
+    <rect x="0" y="0" width="340" height="40" rx="20" fill="#705141" opacity="0.1"/>
+    <text x="20" y="27" font-family="Nunito, sans-serif" font-size="20" font-weight="600" fill="#705141">
+      📍 Tours &amp; Indre-et-Loire (37)
+    </text>
+  </g>
+  
+  <!-- Bottom bar -->
+  <rect x="0" y="550" width="1200" height="80" fill="#705141" opacity="0.05"/>
+  
+  <!-- Website URL -->
+  <text x="600" y="595" font-family="Nunito, sans-serif" font-size="26" font-weight="600" fill="#705141" text-anchor="middle">
+    www.ecdconciergerie.fr
+  </text>
+</svg>

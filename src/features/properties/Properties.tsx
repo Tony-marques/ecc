@@ -5,6 +5,7 @@ import styles from "./Properties.module.css";
 // import maison2 from "../../assets/images/maison2.jfif";
 // import maison3 from "../../assets/images/maison3.jfif";
 // import maison4 from "../../assets/images/maison4.jfif";
+import maison5 from "../../assets/images/maison5.avif";
 // import { client, urlFor } from "../../lib/sanity";
 
 // interface PropertyData {
@@ -92,48 +93,42 @@ export default function Properties() {
   // const hasData = useMemo(() => items.length > 0, [items]);
 
   // Données statiques temporaires
-  // const items = [
-  //   {
-  //     id: "1",
-  //     title: t("properties.items.1.title"),
-  //     location: t("properties.items.1.location"),
-  //     description: t("properties.items.1.description"),
-  //     imageUrl: maison1,
-  //     capacity: 4,
-  //     bedrooms: 2,
-  //     airbnbUrl: "https://www.airbnb.com/",
-  //   },
-  //   {
-  //     id: "2",
-  //     title: t("properties.items.2.title"),
-  //     location: t("properties.items.2.location"),
-  //     description: t("properties.items.2.description"),
-  //     imageUrl: maison2,
-  //     capacity: 6,
-  //     bedrooms: 3,
-  //     airbnbUrl: "https://www.airbnb.com/",
-  //   },
-  //   {
-  //     id: "3",
-  //     title: t("properties.items.3.title"),
-  //     location: t("properties.items.3.location"),
-  //     description: t("properties.items.3.description"),
-  //     imageUrl: maison3,
-  //     capacity: 2,
-  //     bedrooms: 1,
-  //     airbnbUrl: "https://www.airbnb.com/",
-  //   },
-  //   {
-  //     id: "4",
-  //     title: t("properties.items.4.title"),
-  //     location: t("properties.items.4.location"),
-  //     description: t("properties.items.4.description"),
-  //     imageUrl: maison4,
-  //     capacity: 8,
-  //     bedrooms: 4,
-  //     airbnbUrl: "https://www.airbnb.com/",
-  //   },
-  // ];
+  const items: {
+    id: string;
+    title?: string;
+    location?: string;
+    description?: string;
+    imageUrl: string | null;
+    capacity?: number;
+    bedrooms?: number;
+    airbnbUrl?: string;
+    createdAt?: string;
+  }[] = [
+    {
+      id: "5",
+      title: t("properties.items.5.title"),
+      location: t("properties.items.5.location"),
+      description: t("properties.items.5.description"),
+      imageUrl: maison5,
+      capacity: 6,
+      bedrooms: 3,
+      airbnbUrl:
+        "https://www.airbnb.fr/rooms/1409298071938778081?_set_bev_on_new_domain=1769447452_EANjMwZDNkOGZhNG&set_everest_cookie_on_new_domain=1769014895.EAZjkwZjM0NTU2YTMzNm.nl5GBDhwi7Fh9vMsDmMA-ffN5kKc5m34NMeetTulrmQ&source_impression_id=p3_1769664739_P3-SfuzKFoxeJgjZ",
+      createdAt: "27/01/2026", // format DD/MM/YYYY
+    },
+  ];
+
+  // Fonction pour vérifier si un bien est nouveau (moins de 1 mois)
+  const isNew = (createdAt?: string) => {
+    if (!createdAt) return false;
+
+    // Parser la date au format DD/MM/YYYY
+    const [day, month, year] = createdAt.split("/").map(Number);
+    const propertyDate = new Date(year, month - 1, day);
+
+    const monthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+    return propertyDate > monthAgo;
+  };
 
   return (
     <section className={styles.properties} id="consultez-nos-biens">
@@ -161,7 +156,7 @@ export default function Properties() {
         )} */}
 
         <div className={styles.grid}>
-          {/* {items.map((property) => (
+          {items.map((property) => (
             <a
               key={property.id}
               href={property.airbnbUrl}
@@ -170,11 +165,24 @@ export default function Properties() {
               className={styles.card}
             >
               <div className={styles.imageContainer}>
+                {isNew(property.createdAt) && (
+                  <div className={styles.newBadge}>
+                    {t("properties.newBadge")}
+                  </div>
+                )}
                 {property.imageUrl ? (
                   <img
                     src={property.imageUrl}
-                    alt={property.title}
+                    alt={
+                      property.title
+                        ? `${property.title} - Location courte durée à ${property.location || "Tours"}`
+                        : "Bien en location courte durée à Tours"
+                    }
                     loading="lazy"
+                    decoding="async"
+                    width={1200}
+                    height={800}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 ) : (
                   <div className={styles.placeholder}></div>
@@ -190,18 +198,18 @@ export default function Properties() {
                 <div className={styles.details}>
                   <span>
                     👥 {property.capacity} {t("properties.capacityLabel")}
-                    {property.capacity > 1 && "s"}
+                    {(property.capacity ?? 0) > 1 && "s"}
                   </span>
                   <span>
                     🛏️ {property.bedrooms} {t("properties.bedroomsLabel")}
-                    {property.bedrooms > 1 && "s"}
+                    {(property.bedrooms ?? 0) > 1 && "s"}
                   </span>
                 </div>
               </div>
             </a>
-          ))} */}
+          ))}
         </div>
-        <p className={styles.empty}>Aucun bien disponible pour le moment.</p>
+        {/* <p className={styles.empty}>Aucun bien disponible pour le moment.</p> */}
       </div>
     </section>
   );

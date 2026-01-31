@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../features/home/HomePage";
 import LegalNotice from "../features/legal/LegalNotice";
 import PrivacyPolicy from "../features/legal/PrivacyPolicy";
+import NotFound from "../features/errors/NotFound";
 import MainLayout from "../layouts/MainLayout";
 
 export const router = createBrowserRouter([
@@ -30,6 +31,11 @@ export const router = createBrowserRouter([
       {
         path: "/privacy-policy",
         element: <PrivacyPolicy />,
+      },
+      // 404 - Catch all
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

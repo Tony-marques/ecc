@@ -1,0 +1,36 @@
+# humanstxt.org/
+
+/* ÉQUIPE */
+  Designer & Développeur Web: Tony Marques
+  Contact: tony.marques [at] live.fr
+  Localisation: Paris, France
+
+/* FONDATEURS */
+  Co-fondatrice: Laura Marques
+  Rôle: Expérience & Hospitalité
+  Contact: ecdconciergerie [at] gmail.com
+
+  Co-fondateur: Rémi
+  Rôle: Immobilier & Valorisation
+  Contact: ecdconciergerie [at] gmail.com
+
+/* SITE */
+  Langage: Français, Anglais
+  Doctype: HTML5
+  Technologies: React, TypeScript, Vite
+  Standards: Schema.org, Open Graph, WCAG
+  IDE: Visual Studio Code
+
+/* REMERCIEMENTS */
+  Images: Unsplash
+  Polices: Google Fonts (Nunito, Playfair Display, Roboto)
+  Hébergement: Hostinger
+  CMS: Sanity
+
+/* LOCALISATION */
+  Effet Coup de Cœur - Conciergerie
+  28 rue du Vieux Bourg
+  37390 Notre-Dame-d'Oé
+  France
+
+  Zone d'intervention: Tours et Indre-et-Loire (37)

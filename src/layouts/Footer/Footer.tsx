@@ -9,13 +9,22 @@ export default function Footer() {
   const { t, i18n } = useTranslation();
 
   // URLs adaptées selon la langue
-  const legalNoticeUrl = i18n.language === 'fr' ? '/mentions-legales' : '/legal-notice';
-  const privacyPolicyUrl = i18n.language === 'fr' ? '/politique-de-confidentialite' : '/privacy-policy';
+  const legalNoticeUrl =
+    i18n.language === "fr" ? "/mentions-legales" : "/legal-notice";
+  const privacyPolicyUrl =
+    i18n.language === "fr"
+      ? "/politique-de-confidentialite"
+      : "/privacy-policy";
 
   return (
     <div className={styles.footer}>
       <div className={styles.logoWrapper}>
-        <img src={logo} alt="logo" />
+        <img
+          src={logo}
+          alt="Logo Effet Coup de Cœur - Conciergerie à Tours"
+          loading="lazy"
+          decoding="async"
+        />
         <p className={styles.copyright}>
           Copyright © {new Date().getFullYear()} Effet Coup de Cœur
         </p>
@@ -41,9 +50,7 @@ export default function Footer() {
       <div className={styles.right}>
         <h3>{t("footer.information")}</h3>
         <Link to={legalNoticeUrl}>{t("footer.legalNotice")}</Link>
-        <Link to={privacyPolicyUrl}>
-          {t("footer.privacyPolicy")}
-        </Link>
+        <Link to={privacyPolicyUrl}>{t("footer.privacyPolicy")}</Link>
       </div>
     </div>
   );

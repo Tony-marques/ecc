@@ -26,8 +26,10 @@
     },
     "privacyPolicy": {
       "title": "Effet Coup de Cœur Conciergerie Tours - Politique de confidentialité RGPD",
-      "description": "Politique de confidentialité et protection des données personnelles conforme au RGPD pour conciergerie.fr"
-    }
+      "description": "Politique de confidentialité et protection des données personnelles conforme au RGPD pour conciergerie.fr"    },
+    "notFound": {
+      "title": "Effet Coup de Cœur Conciergerie Tours - Page introuvable 404",
+      "description": "La page que vous recherchez n'existe pas. Retournez à l'accueil ou contactez notre conciergerie à Tours."    }
   },
   "nav": {
     "home": "Accueil",
@@ -36,12 +38,19 @@
     "services": "Nos services",
     "properties": "Consultez nos biens"
   },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil ou contactez-nous pour trouver ce que vous cherchez.",
+    "homeButton": "Retour à l'accueil",
+    "contactButton": "Contactez-nous",
+    "quickLinks": "Liens utiles"
+  },
   "home": {
     "title": "Bienvenue",
     "description": "Votre conciergerie spécialisée dans la location courte durée"
   },
   "about": {
-    "title": "Notre équipe",
+    "title": "Notre Équipe - Conciergerie Tours",
     "intro": "Bienvenue chez Effet Coup de Cœur, votre conciergerie spécialisée dans la location courte durée.",
     "teamIntro": "Derrière ce projet, il y a nous : une équipe de deux passionnés, chacun avec son univers.",
     "teamHeading": "Notre équipe",
@@ -52,7 +61,7 @@
     "remi": "Rémi",
     "remiTitle": "Co-fondateur – Immobilier & valorisation",
     "remiDesc": "Amoureux de l’immobilier, Rémi accorde une attention particulière à la valorisation des biens, à la qualité des espaces et au soin apporté à chaque logement. Sa vision : révéler le potentiel de chaque lieu avec exigence et cohérence.",
-    "portraitAlt": "Rémi et Laura – Fondateurs Effet Coup de Cœur",
+    "portraitAlt": "Rémi et Laura – Fondateurs de la conciergerie Effet Coup de Cœur à Tours",
     "teamDescription1": "En associant nos deux passions, créer une conciergerie s'est imposé comme une évidence : un service où le bien-être des voyageurs et la gestion de votre logement se rencontrent.",
     "teamDescription2": "Nous mettons notre expertise et notre passion au service de votre projet, avec une attention particulière portée à chaque détail pour créer l'Effet Coup de Cœur.",
     "foundersConciergies": "Fondateurs & Concierges",
@@ -98,6 +107,7 @@
     "title": "Consultez nos biens",
     "description": "Découvrez notre sélection de propriétés de qualité",
     "viewOnAirbnb": "Voir sur Airbnb",
+    "newBadge": "Nouveau",
     "capacityLabel": "personne",
     "bedroomsLabel": "chambre",
     "items": {
@@ -120,6 +130,11 @@
         "title": "Titre du bien",
         "location": "Tours, France",
         "description": "Description du bien"
+      },
+      "5": {
+        "title": "Appartement - Tours, France",
+        "location": "Tours, France",
+        "description": "Appartement 3 chambres à 5 min de la gare de Tours et TGV Saint-Pierre-des-Corps."
       }
     }
   },

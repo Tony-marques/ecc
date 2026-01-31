@@ -52,30 +52,40 @@ export const usePageMeta = (pageKey: keyof typeof PAGE_METAS) => {
       document.head.appendChild(link);
     });
 
-    // Set Open Graph meta tags
-    const ogTitle = (document.querySelector('meta[property="og:title"]') || (() => {
-      const el = document.createElement("meta");
-      el.setAttribute("property", "og:title");
-      document.head.appendChild(el);
-      return el;
-    })()) as HTMLMetaElement;
-    ogTitle.content = title;
+    // Helper function to set or create meta tag
+    const setMetaTag = (property: string, content: string, isProperty = true) => {
+      const attr = isProperty ? 'property' : 'name';
+      const selector = `meta[${attr}="${property}"]`;
+      let element = document.querySelector(selector) as HTMLMetaElement;
+      
+      if (!element) {
+        element = document.createElement("meta");
+        element.setAttribute(attr, property);
+        document.head.appendChild(element);
+      }
+      element.content = content;
+    };
 
-    const ogDesc = (document.querySelector('meta[property="og:description"]') || (() => {
-      const el = document.createElement("meta");
-      el.setAttribute("property", "og:description");
-      document.head.appendChild(el);
-      return el;
-    })()) as HTMLMetaElement;
-    ogDesc.content = t(meta.descriptionKey);
+    const baseUrl = "https://www.ecdconciergerie.fr";
+    const currentUrl = getCanonicalUrl(location.pathname);
+    const imageUrl = meta.image ? `${baseUrl}${meta.image}` : `${baseUrl}/og-image.jpg`;
 
-    const ogUrl = (document.querySelector('meta[property="og:url"]') || (() => {
-      const el = document.createElement("meta");
-      el.setAttribute("property", "og:url");
-      document.head.appendChild(el);
-      return el;
-    })()) as HTMLMetaElement;
-    ogUrl.content = getCanonicalUrl(location.pathname);
+    // Open Graph meta tags
+    setMetaTag("og:title", title);
+    setMetaTag("og:description", t(meta.descriptionKey));
+    setMetaTag("og:url", currentUrl);
+    setMetaTag("og:type", meta.type || "website");
+    setMetaTag("og:image", imageUrl);
+    setMetaTag("og:image:width", "1200");
+    setMetaTag("og:image:height", "630");
+    setMetaTag("og:site_name", "Effet Coup de Cœur - Conciergerie Tours");
+    setMetaTag("og:locale", i18n.language === 'fr' ? "fr_FR" : "en_US");
+
+    // Twitter Card meta tags
+    setMetaTag("twitter:card", "summary_large_image", false);
+    setMetaTag("twitter:title", title, false);
+    setMetaTag("twitter:description", t(meta.descriptionKey), false);
+    setMetaTag("twitter:image", imageUrl, false);
 
     // Set html lang attribute
     document.documentElement.lang = i18n.language;
