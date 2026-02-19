@@ -157,28 +157,3 @@ export interface ServiceSchemaProps {
   url?: string;
   provider?: string;
 }
-
-export const generateServiceSchema = (props: ServiceSchemaProps) => {
-  const baseUrl = "https://www.ecdconciergerie.fr";
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: props.name,
-    name: props.name,
-    description: props.description,
-    provider: {
-      "@type": "LocalBusiness",
-      name: props.provider || "Effet Coup de Cœur - Conciergerie Tours",
-      url: baseUrl,
-      telephone: "+33676778189",
-      email: "contact@ecdconciergerie.fr",
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Tours",
-      "@id": "https://www.wikidata.org/wiki/Q288",
-    },
-    url: props.url || baseUrl,
-  };
-};

@@ -1,9 +1,22 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../features/home/HomePage";
-import LegalNotice from "../features/legal/LegalNotice";
-import PrivacyPolicy from "../features/legal/PrivacyPolicy";
-import NotFound from "../features/errors/NotFound";
 import MainLayout from "../layouts/MainLayout";
+
+// Lazy load les pages moins critiques
+const LegalNotice = lazy(() => import("../features/legal/LegalNotice"));
+const PrivacyPolicy = lazy(() => import("../features/legal/PrivacyPolicy"));
+const NotFound = lazy(() => import("../features/errors/NotFound"));
+
+const LazyRoute = ({ Component }: { Component: React.ComponentType }) => (
+  <Suspense
+    fallback={
+      <div style={{ padding: "2rem", textAlign: "center" }}>Chargement...</div>
+    }
+  >
+    <Component />
+  </Suspense>
+);
 
 export const router = createBrowserRouter([
   {
@@ -17,25 +30,25 @@ export const router = createBrowserRouter([
       // Routes françaises
       {
         path: "/mentions-legales",
-        element: <LegalNotice />,
+        element: <LazyRoute Component={LegalNotice} />,
       },
       {
         path: "/politique-de-confidentialite",
-        element: <PrivacyPolicy />,
+        element: <LazyRoute Component={PrivacyPolicy} />,
       },
-      // Routes anglaises (même composant, l'i18n gère le contenu)
+      // Routes anglaises
       {
         path: "/legal-notice",
-        element: <LegalNotice />,
+        element: <LazyRoute Component={LegalNotice} />,
       },
       {
         path: "/privacy-policy",
-        element: <PrivacyPolicy />,
+        element: <LazyRoute Component={PrivacyPolicy} />,
       },
       // 404 - Catch all
       {
         path: "*",
-        element: <NotFound />,
+        element: <LazyRoute Component={NotFound} />,
       },
     ],
   },

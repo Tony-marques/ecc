@@ -31,7 +31,6 @@ export default function LanguageSwitcher() {
   const handleLanguageChange = async (lang: string) => {
     if (lang === i18n.language) return;
     const { pathname, search, hash } = location;
-    console.log(pathname);
 
     const targetPath = mapPath(pathname, lang);
     await i18n.changeLanguage(lang);

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Properties.module.css";
 import { client, urlFor } from "../../lib/sanity";
+import { ScrollAnimation } from "../../components/ScrollAnimation/ScrollAnimation";
 
 interface PropertyData {
   _id: string;
@@ -108,15 +109,17 @@ export default function Properties() {
   return (
     <section className={styles.properties} id="consultez-nos-biens">
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h1>{t("properties.title")}</h1>
-          <p className={styles.intro}>{t("properties.description")}</p>
-          <div className={styles.headerDivider}>
-            <span></span>
-            <span className={styles.dividerDot}></span>
-            <span></span>
+        <ScrollAnimation type="fadeInUp">
+          <div className={styles.header}>
+            <h1>{t("properties.title")}</h1>
+            <p className={styles.intro}>{t("properties.description")}</p>
+            <div className={styles.headerDivider}>
+              <span></span>
+              <span className={styles.dividerDot}></span>
+              <span></span>
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
 
         {loading && (
           <p className={styles.intro}>{t("loading") || "Chargement..."}</p>
@@ -130,60 +133,63 @@ export default function Properties() {
           </p>
         )}
 
-        <div className={styles.grid}>
-          {items.map((property) => (
-            <a
-              key={property.id}
-              href={property.airbnbUrl || undefined}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.card}
-            >
-              <div className={styles.imageContainer}>
-                {property.isNew && (
-                  <div className={styles.newBadge}>
-                    {t("properties.newBadge")}
+        <ScrollAnimation type="fadeInUp" delay={100}>
+          <div className={styles.grid}>
+            {items.map((property, index) => (
+              <a
+                key={property.id}
+                href={property.airbnbUrl || undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.card}
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <div className={styles.imageContainer}>
+                  {property.isNew && (
+                    <div className={styles.newBadge}>
+                      {t("properties.newBadge")}
+                    </div>
+                  )}
+                  {property.imageUrl ? (
+                    <img
+                      src={property.imageUrl}
+                      alt={
+                        property.title
+                          ? `${property.title} - Location courte durée à ${property.location || "Tours"}`
+                          : "Bien en location courte durée à Tours"
+                      }
+                      loading="lazy"
+                      decoding="async"
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className={styles.placeholder}></div>
+                  )}
+                  <div className={styles.overlay}>
+                    <span>Voir sur Airbnb</span>
                   </div>
-                )}
-                {property.imageUrl ? (
-                  <img
-                    src={property.imageUrl}
-                    alt={
-                      property.title
-                        ? `${property.title} - Location courte durée à ${property.location || "Tours"}`
-                        : "Bien en location courte durée à Tours"
-                    }
-                    loading="lazy"
-                    decoding="async"
-                    width={1200}
-                    height={800}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                ) : (
-                  <div className={styles.placeholder}></div>
-                )}
-                <div className={styles.overlay}>
-                  <span>Voir sur Airbnb</span>
                 </div>
-              </div>
-              <div className={styles.content}>
-                <h3>{property.title}</h3>
-                <p className={styles.location}>📍 {property.location}</p>
-                <p className={styles.description}>{property.description}</p>
-                <div className={styles.details}>
-                  <span>
-                    👥 {property.capacity} {t("properties.capacityLabel")}
-                    {(property.capacity ?? 0) > 1 && "s"}
-                  </span>
-                  <span>
-                    🛏️ {property.bedrooms} {t("properties.bedroomsLabel")}
-                    {(property.bedrooms ?? 0) > 1 && "s"}
-                  </span>
+                <div className={styles.content}>
+                  <h3>{property.title}</h3>
+                  <p className={styles.location}>📍 {property.location}</p>
+                  <p className={styles.description}>{property.description}</p>
+                  <div className={styles.details}>
+                    <span>
+                      👥 {property.capacity} {t("properties.capacityLabel")}
+                      {(property.capacity ?? 0) > 1 && "s"}
+                    </span>
+                    <span>
+                      🛏️ {property.bedrooms} {t("properties.bedroomsLabel")}
+                      {(property.bedrooms ?? 0) > 1 && "s"}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </a>
-          ))}
-        </div>
+              </a>
+            ))}
+          </div>
+        </ScrollAnimation>
       </div>
     </section>
   );

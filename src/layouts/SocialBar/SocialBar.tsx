@@ -16,11 +16,6 @@ const SOCIALBAR_CONFIGS: SocialItemConfig[] = [
     Icon: <FaFacebook />,
     href: "https://www.facebook.com/profile.php?id=61584790737384#",
   },
-  // {
-  //   label: "linkedin",
-  //   Icon: <FaLinkedin />,
-  //   href: "https://linkedin.com",
-  // },
   {
     label: "instagram",
     Icon: <FaInstagram />,

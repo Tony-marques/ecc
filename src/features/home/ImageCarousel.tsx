@@ -1,14 +1,43 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./ImageCarousel.module.css";
+import { client, urlFor } from "../../lib/sanity";
 
 import maison1 from "../../assets/images/maison1.jfif";
 import maison2 from "../../assets/images/maison2.jfif";
 import maison3 from "../../assets/images/maison3.jfif";
 import maison4 from "../../assets/images/maison4.jfif";
+import maison5 from "../../assets/images/maison5.avif";
 
-const images = [maison1, maison2, maison3, maison4];
+type CarouselImage = {
+  src: string;
+  alt: string;
+};
+
+const fallbackImages: CarouselImage[] = [
+  {
+    src: maison1,
+    alt: "Location courte durée à Tours - Maison 1",
+  },
+  {
+    src: maison2,
+    alt: "Location courte durée à Tours - Maison 2",
+  },
+  {
+    src: maison3,
+    alt: "Location courte durée à Tours - Maison 3",
+  },
+  {
+    src: maison4,
+    alt: "Location courte durée à Tours - Maison 4",
+  },
+  {
+    src: maison5,
+    alt: "Location courte durée à Tours - Maison 5",
+  },
+];
 
 export default function ImageCarousel() {
+  const [images, setImages] = useState<CarouselImage[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef<number | null>(null);
 
@@ -28,7 +57,56 @@ export default function ImageCarousel() {
         clearTimeout(timerRef.current);
       }
     };
-  }, [currentIndex]);
+  }, [currentIndex, images.length]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadLatestProperties = async () => {
+      try {
+        const data = await client.fetch(
+          `*[_type == "property" && status == "published"]|order(coalesce(createdAt, _createdAt) desc)[0...5]{
+            _id,
+            title,
+            city,
+            image
+          }`,
+        );
+
+        if (!isMounted) return;
+
+        const sanityImages: CarouselImage[] = (data || [])
+          .filter((item: { image?: unknown }) => Boolean(item?.image))
+          .map((item: { title?: string; city?: string; image?: unknown }) => ({
+            src: urlFor(item.image)
+              .width(1100)
+              .height(619)
+              .fit("crop")
+              .auto("format")
+              .url(),
+            alt: item?.title
+              ? `${item.title}${item.city ? ` - ${item.city}` : ""}`
+              : "Location courte durée à Tours",
+          }));
+
+        if (sanityImages.length > 0) {
+          setImages(sanityImages);
+          setCurrentIndex(0);
+        } else {
+          setImages(fallbackImages);
+        }
+      } catch {
+        if (!isMounted) return;
+        setImages(fallbackImages);
+      }
+    };
+
+    loadLatestProperties();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const goToPrevious = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -60,8 +138,8 @@ export default function ImageCarousel() {
 
         <img
           key={currentIndex}
-          src={images[currentIndex]}
-          alt={`Logement en location courte durée à Tours ${currentIndex + 1}`}
+          src={images[currentIndex]?.src}
+          alt={images[currentIndex]?.alt}
           className={`${styles.image} ${styles.fadeIn}`}
           loading={currentIndex === 0 ? "eager" : "lazy"}
           decoding="async"

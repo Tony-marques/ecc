@@ -4,7 +4,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import NavItem from "./NavItem";
 import LanguageSwitcher from "./LanguageSwitcher";
 import styles from "./Navbar.module.css";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.webp";
 
 interface NavItemConfig {
   label: string;
