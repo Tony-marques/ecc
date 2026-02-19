@@ -27,7 +27,41 @@ export const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-      // Routes françaises
+      // Routes françaises avec ancres (SEO-friendly)
+      {
+        path: "/notre-equipe",
+        element: <HomePage />,
+      },
+      {
+        path: "/nos-services",
+        element: <HomePage />,
+      },
+      {
+        path: "/nos-biens",
+        element: <HomePage />,
+      },
+      {
+        path: "/contact",
+        element: <HomePage />,
+      },
+      // Routes anglaises avec ancres (SEO-friendly)
+      {
+        path: "/our-team",
+        element: <HomePage />,
+      },
+      {
+        path: "/our-services",
+        element: <HomePage />,
+      },
+      {
+        path: "/our-properties",
+        element: <HomePage />,
+      },
+      {
+        path: "/contact-us",
+        element: <HomePage />,
+      },
+      // Routes légales françaises
       {
         path: "/mentions-legales",
         element: <LazyRoute Component={LegalNotice} />,
@@ -36,7 +70,7 @@ export const router = createBrowserRouter([
         path: "/politique-de-confidentialite",
         element: <LazyRoute Component={PrivacyPolicy} />,
       },
-      // Routes anglaises
+      // Routes légales anglaises
       {
         path: "/legal-notice",
         element: <LazyRoute Component={LegalNotice} />,

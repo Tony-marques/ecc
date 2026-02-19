@@ -25,19 +25,19 @@ export default function Navbar() {
     },
     {
       label: t("nav.about"),
-      path: "notre-equipe",
+      path: "/notre-equipe",
     },
     {
       label: t("nav.contact"),
-      path: "contactez-nous",
+      path: "/contact",
     },
     {
       label: t("nav.services"),
-      path: "nos-services",
+      path: "/nos-services",
     },
     {
       label: t("nav.properties"),
-      path: "consultez-nos-biens",
+      path: "/nos-biens",
       className: "biens",
     },
   ];

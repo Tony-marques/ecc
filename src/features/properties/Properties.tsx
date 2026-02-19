@@ -107,7 +107,7 @@ export default function Properties() {
   const hasData = useMemo(() => items.length > 0, [items]);
 
   return (
-    <section className={styles.properties} id="consultez-nos-biens">
+    <section className={styles.properties} id="nos-biens">
       <div className={styles.container}>
         <ScrollAnimation type="fadeInUp">
           <div className={styles.header}>

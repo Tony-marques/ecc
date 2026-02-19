@@ -9,7 +9,7 @@ export default function Contact() {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.container} id="contactez-nous">
+    <div className={styles.container} id="contact">
       <ScrollAnimation type="fadeInUp">
         <div className={styles.header}>
           <h1>{t("contact.title")}</h1>

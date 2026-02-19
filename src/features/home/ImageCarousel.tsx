@@ -89,8 +89,18 @@ export default function ImageCarousel() {
               : "Location courte durée à Tours",
           }));
 
-        if (sanityImages.length > 0) {
-          setImages(sanityImages);
+        // Combine Sanity images with fallback images if less than 5
+        let finalImages = [...sanityImages];
+        if (finalImages.length < 5) {
+          const remainingSlots = 5 - finalImages.length;
+          finalImages = [
+            ...finalImages,
+            ...fallbackImages.slice(0, remainingSlots),
+          ];
+        }
+
+        if (finalImages.length > 0) {
+          setImages(finalImages);
           setCurrentIndex(0);
         } else {
           setImages(fallbackImages);

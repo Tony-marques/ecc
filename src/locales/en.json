@@ -49,7 +49,9 @@
   },
   "home": {
     "title": "Welcome",
-    "description": "Your concierge service specialized in short-term rentals"
+    "description": "Your concierge service specialized in short-term rentals",
+    "heroTitle": "Luxury Concierge Service in Tours - Short-term Rentals",
+    "heroDescription": "Effet Coup de Cœur, your specialized concierge service in Tours and Indre-et-Loire. Complete management of short-term rentals, property enhancement and premium services for owners. Discover an Airbnb concierge that makes the difference."
   },
   "about": {
     "title": "About Us",

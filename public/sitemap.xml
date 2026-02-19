@@ -4,53 +4,137 @@
   <!-- Home -->
   <url>
     <loc>https://www.ecdconciergerie.fr/</loc>
-    <lastmod>2026-01-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/" />
   </url>
 
+  <!-- Notre équipe / Our Team -->
+  <url>
+    <loc>https://www.ecdconciergerie.fr/notre-equipe</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/notre-equipe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/our-team" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/notre-equipe" />
+  </url>
+
+  <url>
+    <loc>https://www.ecdconciergerie.fr/our-team</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/notre-equipe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/our-team" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/notre-equipe" />
+  </url>
+
+  <!-- Nos services / Our Services -->
+  <url>
+    <loc>https://www.ecdconciergerie.fr/nos-services</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/nos-services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/our-services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/nos-services" />
+  </url>
+
+  <url>
+    <loc>https://www.ecdconciergerie.fr/our-services</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/nos-services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/our-services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/nos-services" />
+  </url>
+
+  <!-- Nos biens / Our Properties -->
+  <url>
+    <loc>https://www.ecdconciergerie.fr/nos-biens</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/nos-biens" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/our-properties" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/nos-biens" />
+  </url>
+
+  <url>
+    <loc>https://www.ecdconciergerie.fr/our-properties</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/nos-biens" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/our-properties" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/nos-biens" />
+  </url>
+
+  <!-- Contact / Contact Us -->
+  <url>
+    <loc>https://www.ecdconciergerie.fr/contact</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/contact-us" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/contact" />
+  </url>
+
+  <url>
+    <loc>https://www.ecdconciergerie.fr/contact-us</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/contact-us" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/contact" />
+  </url>
+
   <!-- Legal Notice (Mentions légales / Legal Notice) -->
   <url>
     <loc>https://www.ecdconciergerie.fr/mentions-legales</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/mentions-legales" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/legal-notice" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/mentions-legales" />
   </url>
 
   <url>
     <loc>https://www.ecdconciergerie.fr/legal-notice</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/mentions-legales" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/legal-notice" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/mentions-legales" />
   </url>
 
   <!-- Privacy Policy (Politique de confidentialité / Privacy Policy) -->
   <url>
     <loc>https://www.ecdconciergerie.fr/politique-de-confidentialite</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/politique-de-confidentialite" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/politique-de-confidentialite" />
   </url>
 
   <url>
     <loc>https://www.ecdconciergerie.fr/privacy-policy</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.ecdconciergerie.fr/politique-de-confidentialite" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ecdconciergerie.fr/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecdconciergerie.fr/politique-de-confidentialite" />
   </url>
 </urlset>
