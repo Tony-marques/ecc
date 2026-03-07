@@ -28,14 +28,23 @@ export const usePageMeta = (pageKey: keyof typeof PAGE_METAS) => {
     }
     descMeta.content = t(meta.descriptionKey);
 
-    // Set canonical URL
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement("link") as HTMLLinkElement;
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
+    // Set canonical URL (only if not null)
+    const canonicalUrl = getCanonicalUrl(location.pathname);
+    if (canonicalUrl) {
+      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+      if (!canonical) {
+        canonical = document.createElement("link") as HTMLLinkElement;
+        canonical.rel = "canonical";
+        document.head.appendChild(canonical);
+      }
+      canonical.href = canonicalUrl;
+    } else {
+      // Remove canonical if it exists and we're returning null
+      const existingCanonical = document.querySelector('link[rel="canonical"]');
+      if (existingCanonical) {
+        existingCanonical.remove();
+      }
     }
-    canonical.href = getCanonicalUrl(location.pathname);
 
     // Set hreflang alternates
     const existingHreflangs = document.querySelectorAll(
@@ -67,7 +76,7 @@ export const usePageMeta = (pageKey: keyof typeof PAGE_METAS) => {
     };
 
     const baseUrl = "https://www.ecdconciergerie.fr";
-    const currentUrl = getCanonicalUrl(location.pathname);
+    const currentUrl = `${baseUrl}${location.pathname}`;
     const imageUrl = meta.image ? `${baseUrl}${meta.image}` : `${baseUrl}/og-image.jpg`;
 
     // Open Graph meta tags
